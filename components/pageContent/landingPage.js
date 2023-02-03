@@ -43,6 +43,9 @@ import { useInView } from "framer-motion";
 
 
 export default function CallToActionWithAnnotation() {
+  console.log("PRoject ID:");
+
+  console.log(process.env.NEXT_PUBLIC_SANITY_PROJECT_ID);
   return (
     <>
       <Head>

@@ -1,21 +1,26 @@
-import { chakra, Box, SimpleGrid, Flex, Icon, ScaleFade, } from "@chakra-ui/react";
+import { chakra, Box, SimpleGrid, Flex,Center, Icon, ScaleFade, } from "@chakra-ui/react";
 import React, { useRef } from "react";
 import { useInView } from "framer-motion";
 
 const Feature = (props) => {
   return (
     <Box minHeight='1vh'>
+      <Center>
       <Icon
         boxSize={12}
         _light={{ color: "green.700" }}
         mb={4}
         fill="none"
-        viewBox="0 0 24 24"
+        viewBox="0 0 21 24"
         stroke="currentColor"
         aria-hidden="true"
+        alignItems="center"
+
       >
         {props.icon}
       </Icon>
+      </Center>
+      <Center>
       <chakra.h3
         mb={3}
         fontSize="lg"
@@ -25,13 +30,19 @@ const Feature = (props) => {
       >
         {props.title}
       </chakra.h3>
+      </Center>
+      
       <chakra.p
         lineHeight="tall"
         color="gray.600"
         _dark={{ color: "gray.50" }}
+        textAlign="center"
       >
         {props.children}
       </chakra.p>
+ 
+
+      
     </Box>
   );
 };

@@ -54,9 +54,9 @@ import {
           <IconButton
               onClick={toggleColorMode}
               icon={
-                colorMode == 'light' ? <MoonIcon color={'green.400'} w={3} h={3} /> : <SunIcon color={'green.100'} w={5} h={5} />
+                colorMode == 'light' ? <MoonIcon color={'green.400'} w={3} h={3} bg={'none'} /> : <SunIcon color={'green.100'} w={5} h={5} />
               }
-              // variant={'ghost'}
+              variant={'ghost'}
               aria-label={'Toggle Navigation'}
             />
         {/* </Button> */}
@@ -82,7 +82,7 @@ import {
           // borderBottom={1}
           borderStyle={'solid'}
           borderColor={useColorModeValue('gray.200', 'gray.900')}
-          align={'center'}
+          align={'unset'}
           >
           <Flex
             flex={{ base: 1, md: 'auto' }}
@@ -97,15 +97,15 @@ import {
               aria-label={'Toggle Navigation'}
             />
           </Flex>
-          <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'space-evenly' }}>
+          <Flex flex={{ base: 3 }} justify={{ base: 'center', md: 'space-evenly' }} p={2}>
           <NextLink href='/#' passHref>
             <Link>
-            <Show above='md'>
-              <NextImage src={colorMode === 'light' ? MedOptics20Years:  MedOptics20Years} width={(300)} height={(90)}/>
-            </Show>
+            {/* <Show above='md'> */}
+              <NextImage src={colorMode === 'light' ? MedOptics20Years:  MedOptics20Years} width={(350)} height={(90)}/>
+            {/* </Show>
             <Show below='md'>
-              <NextImage src={colorMode === 'light' ? MedOpticsBoxLogo:  MedOpticsBoxLogo} width={(50)} height={(50)}/>
-            </Show>
+              <NextImage src={colorMode === 'light' ? MedOptics20Years:  MedOptics20Years} width={(350)} height={(90)}/>
+            </Show> */}
 
                 
             </Link>
@@ -118,7 +118,7 @@ import {
   
           <Stack
             flex={{ base: 1, md: 0 }}
-            justify={'center'}
+            justify={'flex-end'}
             direction={'row'}
             spacing={6}>
             <DarkToggleButton />
@@ -133,16 +133,16 @@ import {
   }
   
   const DesktopNav = () => {
-    const linkColor = useColorModeValue('gray.600', 'gray.200');
-    const linkHoverColor = useColorModeValue('gray.800', 'white');
-    const popoverContentBgColor = useColorModeValue('white', 'gray.800');
+    const linkColor = useColorModeValue('green.800', 'green.200');
+    const linkHoverColor = useColorModeValue('green.800', 'white');
+    const popoverContentBgColor = useColorModeValue('white', 'green.800');
     const { colorMode, toggleColorMode } = useColorMode()
 
   
     return (
-      <Stack direction={'row'}   spacing={8} paddingTop={5}>
+      <Stack direction={'row'}   spacing={8} paddingTop={{md: 8}} >
         {NAV_ITEMS.map((navItem) => (
-          <Box key={navItem.label}>
+          <Box key={navItem.label} zIndex={9999}>
             <Popover trigger={'hover'} placement={'bottom-start'}>
               <NextLink href={navItem.href ?? '#'} passHref>
                 <PopoverTrigger>
@@ -313,11 +313,11 @@ import {
           subLabel: 'Frequently Asked Questions',
           href: '/about/faqs',
         },
-        {
-          label: 'Careers',
-          subLabel: 'Interested in working for us ?',
-          href: '/about/careers',
-        },
+        // {
+        //   label: 'Careers',
+        //   subLabel: 'Interested in working for us ?',
+        //   href: '/about/careers',
+        // },
         // {
         //   label: "How it's Made",
         //   subLabel: 'The Tech Behind this Website',
@@ -325,45 +325,46 @@ import {
         // },
       ],
     },
-    {
-      label: 'Services',
-      children: [
-        // {
-        //   label: 'Products',
-        //   subLabel: 'Frames, Lenses, Contact Lens and more ...',
-        //   href: '/products-and-services/products',
-        // },
-        {
-          label: 'Services',
-          subLabel: 'Book Appointments, Consultations ...',
-          href: '/products-and-services/services',
-        },
-        {
-          label: 'Frame Size Guide',
-          subLabel: 'Guidance for the perfect glasses fit !',
-          href: '/products-and-services/frame-size-guide',
-        },
-      ],
-    }, 
-    {
+    // {
+    //   label: 'Services',
+    //   children: [
+    //     // {
+    //     //   label: 'Products',
+    //     //   subLabel: 'Frames, Lenses, Contact Lens and more ...',
+    //     //   href: '/products-and-services/products',
+    //     // },
+    //     {
+    //       label: 'Services',
+    //       subLabel: 'Book Appointments, Consultations ...',
+    //       href: '/products-and-services/services',
+    //     },
+    //     {
+    //       label: 'Frame Size Guide',
+    //       subLabel: 'Guidance for the perfect glasses fit !',
+    //       href: '/products-and-services/frame-size-guide',
+    //     },
+    //   ],
+    // }, 
+    ,{
       label: 'Book Appointment',
-      children: [
-        {
-          label: 'Eye Test',
-          subLabel: 'Modern Specialist Machinery, Great Service',
-          href: '/appointments/eyeTest',
-        },
-        {
-          label: 'Glasses Fitting',
-          subLabel: "For Maximal Comfort",
-          href: '/appointments/eyeTest',
-        },
-        {
-          label: 'Schedule Collection',
-          subLabel: 'Collect previously ordered items',
-          href: '/appointments/eyeTest',
-        }
-      ],
+      href: '/appointments/eyeTest'
+      // children: [
+      //   {
+      //     label: 'Eye Test',
+      //     subLabel: 'Modern Specialist Machinery, Great Service',
+      //     href: '/appointments/eyeTest',
+      //   },
+      //   {
+      //     label: 'Glasses Fitting',
+      //     subLabel: "For Maximal Comfort",
+      //     href: '/appointments/eyeTest',
+      //   },
+      //   {
+      //     label: 'Schedule Collection',
+      //     subLabel: 'Collect previously ordered items',
+      //     href: '/appointments/eyeTest',
+      //   }
+      // ],
     },   
     {
       label: 'Find Us',
@@ -387,7 +388,7 @@ import {
     },
     {
       label: 'Blog',
-      href: 'https://medoptics-blog-sanity-cms-next-js.vercel.app/',
+      href: 'https://medoptics-blog.vercel.app/',
       // children: [
       //   // {
       //   //   label: 'Upcoming/Current',
@@ -409,17 +410,17 @@ import {
 
     {
       label: 'Shop',
-      children: [
-        // {
-        //   label: 'Upcoming/Current',
-        //   subLabel: '',
-        //   href: '/workshops/current-workshop',
-        // },
-        {
-          label: 'Workshop Archive',
-          subLabel: '',
-          href: '/workshops/workshops-archive',
-        }
-      ],
+      // children: [
+      //   // {
+      //   //   label: 'Upcoming/Current',
+      //   //   subLabel: '',
+      //   //   href: '/workshops/current-workshop',
+      //   // },
+      //   {
+      //     label: 'Workshop Archive',
+      //     subLabel: '',
+      //     href: '/workshops/workshops-archive',
+      //   }
+      // ],
     }
   ];

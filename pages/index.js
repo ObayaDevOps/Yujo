@@ -13,7 +13,7 @@ export default function Home() {
         <title>Home | MedOptics Ltd</title>
         <meta name="description" content="MedOptics Ltd Webpage" />
         {/* <link rel="shortcut icon" href="../public/favicon.ico"></link> */}
-        <link rel="shortcut icon" href="../../../images/icon/medoptics-logo-mini-square.jpeg"></link>
+        <link rel="shortcut icon" href="../../../images/icon/logosquare.svg"></link>
       </Head>
 
       <Box>

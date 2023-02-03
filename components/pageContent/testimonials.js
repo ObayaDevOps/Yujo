@@ -97,7 +97,7 @@ const TestimonialAvatar = ({
 export default function WithSpeechBubbles() {
   return (
     <Box bg={useColorModeValue('green.100', 'green.700')}>
-      <Container maxW={'6xl'} py={16} as={Stack} spacing={12}>
+      <Container maxW={'6xl'} py={16} as={Stack} spacing={12} p={{base:12}}>
         <Stack spacing={0} align={'center'}>
           <Heading>Our Clients Speak</Heading>
           <Text>We have been working with clients around the world</Text>

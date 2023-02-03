@@ -23,15 +23,45 @@ For updating the webpage Content, we use Sanity, it can hold any type of content
 
 Link: https://www.sanity.io/
 
-To Manage the account, log in to the admin panel:
+To Manage the account, log in to the admin panel add '/manage' to the end of the URL:
 
 Link: https://www.sanity.io/manage
 
-To manage the Webpage Content, log into 'Sanity Studio'
+From here the key info to change is :
+NEXT_PUBLIC_SANITY_PROJECT_ID=XXXXXXX
+NEXT_PUBLIC_SANITY_DATASET=production
+
+These are crucial environment variable and can be changed locally in '.env.local' and on prod in Vercel Dashboard:  project -> settings -> environment variables
+
+Remember, if the URL is changed the CORS will need to be added - Manage Panel :API -> CORS -> add new base url
+
+To manage the Webpage Content, log into 'Sanity Studio': Just add '/studio' to the end of the URL or 'Admin Panel' in the footer
 
 Link: https://www.sanity.io/docs/sanity-studio
 
 Learn about Sanity Studio SetUp: https://www.sanity.io/docs/setup-and-deployment
+
+
+To Create something new on the webpage, you will need to add a 'Schema' to the codebase:
+
+Learn more: https://www.sanity.io/docs/schemas-and-forms
+
+Note: That only 'document' type schemas will be available to create in the studio, all other lower-type schemas will need to be made of 'documents'
+
+Image Hosting on Sanity: 
+
+
+TO C
+
+## Email Form Submission
+
+This website uses 'nodemailer': https://nodemailer.com/about/
+
+Change the vercel environment variables / .env.local
+
+SMTP_USER=XXXXXXXXXXX@gmail.com
+SMTP_PASSWORD=XXXXXXXXXXXX
+RECIPIENT_ADDRESS=XXXXXXXXXXXXX@gmail.com
 
 
 ## Image Hosting

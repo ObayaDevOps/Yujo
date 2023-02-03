@@ -2,11 +2,16 @@ import React from "react";
 import { chakra, Box, useColorModeValue, Stack, Button, Icon, Image, Heading, Text } from "@chakra-ui/react";
 import NextLink from 'next/link';
 
+import NextImage from 'next/image';
+import { urlForImage } from '../../lib/sanity.image'
+
+//get ServerSideProps - to load the sanity images 
+
 export default function HeroWithSideImage(){
 
   const bg = useColorModeValue("white", "gray.800");
   return (
-    <Box pos="relative" overflow="hidden" bg={bg} mt={0}>
+    <Box pos="relative" overflow="hidden" bg={bg} mt={0} p={{base:5, md: 0}} >
       <Box maxW="7xl" mx="auto">
         <Box
           pos="relative"
@@ -17,6 +22,7 @@ export default function HeroWithSideImage(){
           zIndex={1}
           bg={bg}
           border="solid 1px transparent"
+          minHeight={'90vh'}
         >
           <Icon
             display={{ base: "none", lg: "block" }}
@@ -37,7 +43,7 @@ export default function HeroWithSideImage(){
           </Icon>
           <Box
             mx="auto"
-            maxW={{ base: "7xl" }}
+            // maxW={{ base: "7xl" }}
             px={{ base: 4, sm: 6, lg: 8 }}
             mt={{ base: 10, sm: 12, md: 16, lg: 20, xl: 28 }}
           >
@@ -79,12 +85,12 @@ export default function HeroWithSideImage(){
                         fontWeight="extrabold"
                         transition="all .65s ease" _hover={{ transform: 'scale(1.005)', filter: "brightness(140%)", }}
                         >
-                        Eye Health needs
+                        Optical Needs
                         </Text>{" "}
                         in one single place.
                 </Heading>
 
-              <chakra.p
+              {/* <chakra.p
                 mt={{ base: 3, sm: 5, md: 5 }}
                 fontSize={{ sm: "lg", md: "xl" }}
                 maxW={{ sm: "xl" }}
@@ -93,7 +99,15 @@ export default function HeroWithSideImage(){
               >
                 Good vision is essential for our everyday wellbeing and quality of life. The sense of Sight is how we experience the world. It is how we learn, how we remember, and what many fear losing the most. Being able to see clearly allows us to learn, work,
                 and interact with the world around us. That’s why Med Optics teams across the country are driven by a vital mission of improving lives by improving sight. To protect, correct, enhance, and treat.
-              </chakra.p>
+              </chakra.p> */}
+              <chakra.p
+                mt={{ base: 3, sm: 5, md: 5 }}
+                fontSize={{ sm: "lg", md: "xl" }}
+                maxW={{ sm: "xl" }}
+                mx={{ sm: "auto", lg: 0 }}
+                color="gray.500"
+              >
+Med-Optics  is a private company that was established in 2002 to provide a high standard of quality eye care services.  We have modern equipment and experienced staff to take care of all patients’ needs.              </chakra.p>
               <Box
                 mt={{ base: 5, sm: 8 }}
                 display={{ sm: "flex" }}
@@ -200,14 +214,38 @@ export default function HeroWithSideImage(){
         w={{ lg: "50%" }}
         border="solid 1px transparent"
       >
-        <Image
+        {/* <Image
           h={[56, 72, 96, "full"]}
           w="full"
           fit="cover"
           src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
           alt=""
           loading="eager"
-        />
+        /> */}
+
+    <Image
+        w="full"
+        layout='fill'
+        h={[56, 72, 96, "full"]}
+        alt={`Cover Image`}
+        fit="cover"
+        src={urlForImage('image-3afb360863fdc0e6fa6fcb015b4bba922f325d8f-2850x1900-jpg').height(1000).width(2000).url()}
+        // sizes="100vw"
+        priority={true}
+      />
+
+      {/* <NextImage
+        w="full"
+        layout='fill'
+        h={[56, 72, 96, "full"]}
+        alt={`Cover Image`}
+        fit="cover"
+        src={urlForImage('image-3afb360863fdc0e6fa6fcb015b4bba922f325d8f-2850x1900-jpg').height(1000).width(2000).url()}
+        // sizes="100vw"
+        priority={true}
+      /> */}
+
+        
       </Box>
     </Box>
   );

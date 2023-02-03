@@ -8,7 +8,13 @@ import {
     Text,
     VisuallyHidden,
     Input,
+    Button,
     IconButton,
+    useToast,
+    FormControl,
+    FormLabel,
+    InputGroup,
+    InputLeftElement,
     useColorModeValue,
   } from '@chakra-ui/react';
   import { ReactNode } from 'react';
@@ -17,10 +23,17 @@ import {
   import NextLink from 'next/link'
 
   import MedOptics20Years from '../../public/images/icon/Med-Optics.svg'
-  import Top100Companies from '../../public/images/icon/Top100Logo.png'
+  import Top100Companies from '../../public/images/icon/Top100Logo.svg'
   import Image from 'next/image'
+  import { MdEmail, MdOutlineEmail, MdPhone } from 'react-icons/md';
 
-  
+  import { useState } from 'react'
+
+
+
+
+
+
   const Logo = (props) => {
     return (
       <svg
@@ -76,6 +89,29 @@ import {
   };
   
   export default function FooterLargeWithNewsletterAdvanced() {
+    const toast = useToast()
+    const [submitted, setSubmitted] = useState(false);
+
+    const userData = async event => {
+      event.preventDefault()
+      setSubmitted(true)
+  
+      let userTypedData = {
+        Email: event.target.email.value,
+      }
+  
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(userTypedData)
+      })
+    }
+  
+
+
+
     return (
       <Box
         bg={useColorModeValue('gray.50', 'gray.900')}
@@ -87,14 +123,15 @@ import {
           <SimpleGrid
             templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 1fr 2fr' }}
             spacing={8}>
-            <Stack spacing={6}>
-              <Box>
-              <NextLink href='/#'>
-                <Image src={useColorModeValue( MedOptics20Years,MedOptics20Years)} width={595} height={134}/>
-                </NextLink>
+            <Stack spacing={6} >
+              <Box text="left">
                 <NextLink href='/#'>
-                <Image src={useColorModeValue( Top100Companies,Top100Companies)} width={395} height={154}/>
-                </NextLink>                  </Box>
+                  <Image src={useColorModeValue( MedOptics20Years,MedOptics20Years)} width={595} height={134}/>
+                </NextLink>
+                <NextLink href='https://www.ugandainvest.go.ug/sme/top-100-smes/'>
+                  <Image src={useColorModeValue( Top100Companies,Top100Companies)} width={395} height={100} />
+                  </NextLink>                  
+                </Box>
               <Text fontSize={'sm'}>
                 © 2023 Med-Optics Ltd. All rights reserved
               </Text>
@@ -125,34 +162,97 @@ import {
               <Link href={'/appointments/eyeTest'}>Book Appointment</Link>
             </Stack>
             <Stack align={'flex-start'}>
-              <ListHeader>Support</ListHeader>
-              <Link href={'#'}>Help Center</Link>
+              <ListHeader>Internal</ListHeader>
+              {/* <Link href={'#'}>Help Center</Link>
               <Link href={'#'}>Terms of Service</Link>
               <Link href={'#'}>Legal</Link>
-              <Link href={'#'}>Privacy Policy</Link>
-              <Link href={'#'}>Satus</Link>
+              <Link href={'#'}>Privacy Policy</Link> */}
+              <Link href={'/studio'}>Editor Studio</Link>
+              <Link href={'https://www.sanity.io/manage/personal/project/zpkm4qcc'}>Admin Panel</Link>
+              <Link href={'https://calendly.com/event_types/user/me'}>Calendar Panel</Link>
+              <Link href={'https://cloudinary.com/console/c-323989889f21929f38a964a71e3f0d/media_library/folders/home?'}>Images Panel</Link>
+
+
+              
+
+
             </Stack>
             <Stack align={'flex-start'}>
               <ListHeader>Stay up to date</ListHeader>
               <Stack direction={'row'}>
-                <Input
-                  placeholder={'Your email address'}
-                  bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-                  border={0}
-                  _focus={{
-                    bg: 'whiteAlpha.300',
-                  }}
-                />
-                <IconButton
-                  bg={useColorModeValue('green.400', 'green.800')}
-                  color={useColorModeValue('white', 'gray.800')}
-                  _hover={{
-                    bg: 'green.600',
-                  }}
-                  aria-label="Subscribe"
-                  icon={<BiMailSend />}
-                />
-              </Stack>
+              <form onSubmit={(e) => userData(e)}>
+                  {/* <Input
+                    placeholder={'Your email address'}
+                    bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+                    border={0}
+                    _focus={{
+                      bg: 'whiteAlpha.300',
+                    }}
+                  /> */}
+
+<FormControl isRequired>
+
+<InputGroup>
+                        <InputLeftElement>
+                          <MdOutlineEmail />
+                        </InputLeftElement>
+                        <Input
+                          id="email"
+                          type="email"
+                          name="email"
+                          placeholder="Your Email"
+                        />
+                      </InputGroup>
+                    </FormControl>
+
+
+
+                  {/* <IconButton
+                    bg={useColorModeValue('green.400', 'green.800')}
+                    color={useColorModeValue('white', 'gray.800')}
+                    _hover={{
+                      bg: 'green.600',
+                    }}
+                    aria-label="Subscribe"
+                    icon={<BiMailSend />}
+                    type="submit"
+                    onClick={() =>
+                      toast({
+                        title: 'Message Sent.',
+                        description: "We will get back to you soon!",
+                        status: 'success',
+                        duration: 9000,
+                        isClosable: true,
+                      })}
+                  /> */}
+
+                    <Button
+                    type="submit"
+                      colorScheme="green"
+                      bg="green.400"
+                      color="white"
+                      _hover={{
+                        bg: 'green.500',
+                      }}
+                      p={2}
+                      onClick={() =>
+                        toast({
+                          title: 'Email Submitted !.',
+                          description: "We will get back to you soon!",
+                          status: 'success',
+                          duration: 9000,
+                          isClosable: true,
+                        })}
+      
+                        size='xs'
+                      >
+                      Submit Email
+                    </Button>
+
+
+              </form>
+                </Stack>
+
               <Text fontSize={'sm'} fontWeight={"bold"}>   
                 Address
               </Text>

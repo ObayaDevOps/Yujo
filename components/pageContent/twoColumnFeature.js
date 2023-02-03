@@ -5,19 +5,12 @@ import {
     Heading,
     Text,
     Stack,
-    StackDivider,
-    Icon,
     useColorModeValue,
-    ScaleFade
+    ScaleFade,
+    Show,
   } from '@chakra-ui/react';
-  import {
-    IoAnalyticsSharp,
-    IoLogoBitcoin,
-    IoSearchSharp,
-  } from 'react-icons/io5';
   import React, { useRef } from "react";
   import { useInView } from "framer-motion";
-    import Head from 'next/head';
   import Image from 'next/image';
   import { getCloudinaryImage, getCloudinaryImageBlur } from '../../components/utils/cloudinaryImageRetreival';
   
@@ -53,11 +46,10 @@ import {
     return (
       <ScaleFade initialScale={0.6}
       in={isInView}>
-        <Container  maxW={'6xl'} py={120} paddingTop={70} minHeight={"75vh"} centerContent >
+        <Container  maxW={'6xl'}  minHeight={"75vh"} centerContent >
         
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-            <Stack spacing={4}       ref={ref}
->
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} p={{base:7, md: 0}}>
+            <Stack spacing={4}       ref={ref}>
               <Text
                 textTransform={'uppercase'}
                 color={'green.400'}
@@ -74,7 +66,7 @@ import {
               bgClip="text"
               bgGradient='linear(to-r, green.600, green.300)'
               fontWeight="extrabold"
-
+              pb={{base:7}}
               >
                   A Modern Eye-Care Specialist</Heading>
 
@@ -90,49 +82,35 @@ import {
               <Text color={'gray.500'} fontSize={'lg'}>
                 With a culture of quality: at the service of customers, employees, and the community, we are unwavering in our pursuit to transform eye care standards and improve patient lives throughout Uganda.
               </Text>
-              <Stack
-                spacing={4}
-  >
-                <Feature
-                  icon={
-                    <Icon as={IoAnalyticsSharp} color={'yellow.500'} w={5} h={5} />
-                  }
-                  iconBg={useColorModeValue('yellow.100', 'yellow.900')}
-                  text={'9 Service Centres'}
-                />
-                <Feature
-                  icon={<Icon as={IoLogoBitcoin} color={'green.500'} w={5} h={5} />}
-                  iconBg={useColorModeValue('green.100', 'green.900')}
-                  text={'20 Years of Service'}
-                />
-                <Feature
-                  icon={
-                    <Icon as={IoSearchSharp} color={'purple.500'} w={5} h={5} />
-                  }
-                  iconBg={useColorModeValue('purple.100', 'purple.900')}
-                  text={'100,000 patients served'}
-                />
-                            <Feature
-                  icon={
-                    <Icon as={IoSearchSharp} color={'purple.500'} w={5} h={5} />
-                  }
-                  iconBg={useColorModeValue('purple.100', 'purple.900')}
-                  text={'200+ Outreaches Conducted'}
-                />
-              </Stack>
+
             </Stack>
-            <Flex>
-            <Image
-                w="full"
-                rounded="lg"
-                shadow="2xl"
-                src={getCloudinaryImage('anguyo.jpg')} 
-                alt="Hellonext feedback boards software screenshot"
-                width={1349}
-                height={550} 
-                placeholder="blur"
-                blurDataURL={getCloudinaryImageBlur('anguyo.jpg')}
-              />
+            <Flex pb={{base:10}}>
+              <Show below='sm'>
+                <Image
+                    w="full"
+                    rounded="lg"
+                    shadow="2xl"
+                    src={getCloudinaryImage('anguyo.jpg')} 
+                    alt="Hellonext feedback boards software screenshot"
+                    width={1349}
+                    height={1450} 
+                    placeholder="blur"
+                    blurDataURL={getCloudinaryImageBlur('anguyo.jpg')}
+                  />
+              </Show>
+              <Show above='md'>
+                <Image
+                    w="full"
+                    rounded="lg"
+                    shadow="2xl"
+                    src={getCloudinaryImage('anguyo.jpg')} 
+                    alt="Hellonext feedback boards software screenshot"
+                    width={1349}
+                    height={1700} 
+                    placeholder="blur"
+                    blurDataURL={getCloudinaryImageBlur('anguyo.jpg')}
+                  />
+              </Show>
             </Flex>
           </SimpleGrid>
         </Container>
