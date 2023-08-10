@@ -34,7 +34,7 @@ export default function blogPostWithImage() {
           >Projects</Text>
           </Center> */}
                 <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'} pt={20}>
-        <Heading fontSize={'8xl'} bgClip="text"
+        <Heading fontSize={{base: '4xl', md:'8xl'}} bgClip="text"
             bgGradient="linear(to-r, green.400,purple.500)"
             fontWeight="extrabold">
               Our Work</Heading>
@@ -47,7 +47,7 @@ export default function blogPostWithImage() {
     <Center>
       <VStack padding={{md:15}} spacing={12}>
       <Box
-        maxW={{base: '30vw', md: '60vw'}}
+        maxW={{base: '80vw', md: '60vw'}}
         w={'full'}
         // eslint-disable-next-line react-hooks/rules-of-hooks
         bg={useColorModeValue('white', 'gray.900')}
@@ -55,7 +55,7 @@ export default function blogPostWithImage() {
         rounded={'md'}
         p={10}
         overflow={'hidden'}>
-        <Box  maxW={'75vw'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'} >
+        <Box  maxW={{md:'75vw'}} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'} >
             <Image
                         // w="full"
                         rounded="lg"
@@ -93,7 +93,7 @@ export default function blogPostWithImage() {
       </Box>
 
       <Box
-        maxW={{base: '30vw', md: '60vw'}}
+        maxW={{base: '80vw', md: '60vw'}}
         w={'full'}
         // eslint-disable-next-line react-hooks/rules-of-hooks
         bg={useColorModeValue('white', 'gray.900')}
@@ -141,7 +141,7 @@ United Nations Development Program in 2023.
       </Box>
 
       <Box
-        maxW={{base: '30vw', md: '60vw'}}
+        maxW={{base: '80vw', md: '60vw'}}
         w={'full'}
         // eslint-disable-next-line react-hooks/rules-of-hooks
         bg={useColorModeValue('white', 'gray.900')}

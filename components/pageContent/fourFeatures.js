@@ -56,7 +56,7 @@ export default function GridListWithHeading() {
   >
     <Box p={4}>
       <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
-        <Heading fontSize={'8xl'} bgClip="text"
+        <Heading fontSize={{base:'6xl',md:'8xl'}} bgClip="text"
             bgGradient="linear(to-r, green.400,purple.500)"
             fontWeight="extrabold">
               What We Do</Heading>

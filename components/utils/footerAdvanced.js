@@ -24,6 +24,9 @@ import {
 
   import MedOptics20Years from '../../public/images/icon/Med-Optics.svg'
   import Top100Companies from '../../public/images/icon/Top100Logo.svg'
+
+  import DWOLOGO from '../../public/images/icon/DWOLogo.png'
+
   import Image from 'next/image'
   import { MdEmail, MdOutlineEmail, MdPhone } from 'react-icons/md';
 
@@ -126,14 +129,11 @@ import {
             <Stack spacing={6} >
               <Box text="left">
                 <NextLink href='/#'>
-                  <Image src={useColorModeValue( MedOptics20Years,MedOptics20Years)} width={595} height={134}/>
-                </NextLink>
-                <NextLink href='https://www.ugandainvest.go.ug/sme/top-100-smes/'>
-                  <Image src={useColorModeValue( Top100Companies,Top100Companies)} width={395} height={100} />
-                  </NextLink>                  
+                  <Image src={useColorModeValue( DWOLOGO,DWOLOGO)} width={595} height={134}/>
+                </NextLink>            
                 </Box>
               <Text fontSize={'sm'}>
-                © 2023 Med-Optics Ltd. All rights reserved
+                © 2023 Dralega Web Operations. All rights reserved
               </Text>
               <Stack direction={'row'} spacing={6}>
                 <SocialButton label={'Twitter'} href={'https://twitter.com/OpticsMed'}>
