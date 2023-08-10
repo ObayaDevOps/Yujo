@@ -10,10 +10,10 @@ export default function Home() {
   return (
     <div >
       <Head>
-        <title>Home | MedOptics Ltd</title>
-        <meta name="description" content="MedOptics Ltd Webpage" />
+        <title>Home | Dralega Web Ops SMC Ltd</title>
+        <meta name="description" content="Dralega Web Ops Webpage" />
         {/* <link rel="shortcut icon" href="../public/favicon.ico"></link> */}
-        <link rel="shortcut icon" href="../../../images/icon/logosquare.svg"></link>
+        <link rel="shortcut icon" href="../../../images/icon/DWOLogo.png"></link>
       </Head>
 
       <Box>

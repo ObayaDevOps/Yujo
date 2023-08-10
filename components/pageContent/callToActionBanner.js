@@ -40,7 +40,7 @@ export default function CallToActionBanner(){
               color="brand.600"
               _dark={{ color: "gray.500" }}
             >
-              Get your eyes checked today!
+              Take your business to the next level today!
             </chakra.span>
           </chakra.h2>
           <Stack
@@ -52,8 +52,8 @@ export default function CallToActionBanner(){
                 <Button
                 as="a"
                 variant="solid"
-                colorScheme="green"
-                bgGradient='linear(to-r, green.500, green.300)'
+                colorScheme="blue"
+                bgGradient='linear(to-r, blue.500, blue.300)'
 
                 display="inline-flex"
                 alignItems="center"
@@ -70,7 +70,7 @@ export default function CallToActionBanner(){
                 size="lg"
                 cursor="pointer"
                 >
-                Find a Centre
+                See Our Pricing
                 <Icon boxSize={4} ml={1} viewBox="0 0 20 20" fill="currentColor">
                     <path
                     fillRule="evenodd"
@@ -85,8 +85,8 @@ export default function CallToActionBanner(){
               <NextLink href="/appointments/eyeTest">
                   <Button
                   as="a"
-                  colorScheme="green"
-                  bgGradient='linear(to-r, green.500, green.300)'
+                  colorScheme="blue"
+                  bgGradient='linear(to-r, blue.500, blue.300)'
                   display="inline-flex"
                   alignItems="center"
                   justifyContent="center"

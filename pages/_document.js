@@ -9,8 +9,8 @@ export default class Document extends NextDocument {
     return (
       <Html lang='en'>
         <Head>
-        <meta name="description" content="Med-Optics Ltd Webpage" />
-        <link rel="shortcut icon" href="../../../images/icon/medoptics-logo-mini-square.jpeg"></link>
+        <meta name="description" content="Dralega Web Operations Ltd Webpage" />
+        <link rel="shortcut icon" href="../../../images/icon/DWOLogo.png"></link>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" 
         rel="stylesheet" />
