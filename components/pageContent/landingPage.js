@@ -19,33 +19,11 @@ import {
 import React, { useRef } from "react";
 
 
-import { SlideData } from "../../components/utils/carousel/medoptics-landing-slides"
-import ImageSlider from '../../components/utils/carousel/imageSlider'
-
-import { FcAssistant, FcDonate, FcInTransit } from 'react-icons/fc';
-
-import Hero1 from './heroWithImageSlider';
-import HeroWithSideImage from './heroWithSideImage';
 import HeroWithScreenshot from './heroWithScreenshot'
-
-import TwoColumnFeature from './twoColumnFeature';
-import BasicStatistics from './statisticsBar';
-import GridListWithDescription from './gridListWithDescription';
-import FullWidthBannerWithBackgroundImage from './fullWidthBackgroundBanner';
-
-
-import ThreeFeature from './threeFeatures';
-import CallToAction from './callToAction';
 import CallToActionBanner from './callToActionBanner';
-import TwoPicFeature from './twoPicFeature';
-import WithSpeechBubbles from './testimonials';
-import { EyeTestCalendar } from '../../pages/appointments/eyeTest';
 
 import FourFeature from './fourFeatures'
 import ProjectCards from './projectCard'
-import { useInView } from "framer-motion";
-
-
 
 
 export default function CallToActionWithAnnotation() {
@@ -68,19 +46,11 @@ export default function CallToActionWithAnnotation() {
         style={{ filter: 'blur(80px)' }}
       />
 
-      {/* <HeroWithSideImage /> */}
       <HeroWithScreenshot/>
       <FourFeature />
       <ProjectCards />
       <CallToActionBanner />
 
-
-      {/* <ThreeFeature />
-      <TwoColumnFeature />
-      <BasicStatistics />
-      <GridListWithDescription />
-      <FullWidthBannerWithBackgroundImage />
-      <WithSpeechBubbles /> */}
       </Box>
 
       
@@ -133,73 +103,6 @@ const Arrow = createIcon({
   ),
 });
 
-const Hero = () => {
-return (
-
-  <Container maxW={'3xl'}>
-          <Stack
-            as={Box}
-            textAlign={'center'}
-            spacing={{ base: 8, md: 14 }}
-            py={{ base: 20, md: 36 }}>
-            <Heading
-              fontWeight={600}
-              fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
-              lineHeight={'110%'}>
-              Cherish the Gift of <br />
-              <Text as={'span'} color={'green.400'}>
-                Sight
-              </Text>
-            </Heading>
-            <Text color={'gray.500'}>
-            Med-Optics is a private company that was established in 2002 to provide a high standard of quality eye care services.
-            Over the years,
-            we have established ourselves as the leading provider of Optometry and Ophthalmic services in Uganda.
-            </Text>
-            <Stack
-              direction={'column'}
-              spacing={3}
-              align={'center'}
-              alignSelf={'center'}
-              position={'relative'}>
-              <Button
-                colorScheme={'green'}
-                bg={'green.400'}
-                rounded={'full'}
-                px={6}
-                _hover={{
-                  bg: 'green.500',
-                }}>
-                Get Started
-              </Button>
-              <Button variant={'link'} colorScheme={'blue'} size={'sm'}>
-                Learn more
-              </Button>
-              <Box>
-                <Icon
-                  as={Arrow}
-                  color={useColorModeValue('gray.800', 'gray.300')}
-                  w={71}
-                  position={'absolute'}
-                  right={-71}
-                  top={'10px'}
-                />
-                <Text
-                  fontSize={'lg'}
-                  fontFamily={'Caveat'}
-                  position={'absolute'}
-                  right={'-125px'}
-                  top={'-15px'}
-                  transform={'rotate(10deg)'}>
-                  Book an Appointment
-                </Text>
-              </Box>
-            </Stack>
-          </Stack>
-        </Container>
-)
-};
-
 
 const Feature = ({ title, text, icon }) => {
   return (
@@ -221,33 +124,4 @@ const Feature = ({ title, text, icon }) => {
   );
 };
     
-  const SimpleThreeColumns = () => {
-      return (
-        <Container p={4} centerContent >
-          <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
-            <Feature
-              icon={<Icon as={FcAssistant} w={10} h={10} />}
-              title={'Computerized Eye Examination'}
-              text={
-                'See an Optometrist or Ophthalmologist according to your needs. A number of tests are available in order to detect the cause of your discomfort or vision impairment.'
-              }
-            />
-            <Feature
-              icon={<Icon as={FcDonate} w={10} h={10} />}
-              title={'Made-to-measure lenses'}
-              text={
-                'We manufacture lenses in house and are the exclusive Uganda providers of BBGR lenses, which is a French brand with over 170 years of lens crafting expertise.'
-              }
-            />
-            <Feature
-              icon={<Icon as={FcInTransit} w={10} h={10} />}
-              title={'Life long Aftercare'}
-              text={
-                'We believe that care extends long after you leave the service centre. To ensure the utmost patient satisfaction, adjustments and repairs are free for all our frames!'
-              }
-            />
-          </SimpleGrid>
-        </Container>
-      );
-    }
   

@@ -1,5 +1,6 @@
 import React from "react";
-import { chakra, Box, Flex, Stack, Button, Icon } from "@chakra-ui/react";
+import { chakra, Box, Flex, Stack, Button, Icon,  useColorModeValue
+} from "@chakra-ui/react";
 import NextLink from 'next/link';
 
 
@@ -37,8 +38,8 @@ export default function CallToActionBanner(){
             <chakra.span display="block">Ready to dive in?</chakra.span>
             <chakra.span
               display="block"
-              color="brand.600"
-              _dark={{ color: "gray.500" }}
+              // color="brand.600"
+              // _dark={{ color: "gray.500" }}
             >
               Take your business to the next level today!
             </chakra.span>
@@ -52,9 +53,8 @@ export default function CallToActionBanner(){
                 <Button
                 as="a"
                 variant="solid"
-                colorScheme="blue"
-                bgGradient='linear(to-r, blue.500, blue.300)'
-
+                colorScheme="whiteAlpha"
+                textColor={useColorModeValue('gray.600', 'white')}
                 display="inline-flex"
                 alignItems="center"
                 justifyContent="center"
@@ -85,8 +85,8 @@ export default function CallToActionBanner(){
               <NextLink href="/appointments/eyeTest">
                   <Button
                   as="a"
-                  colorScheme="blue"
-                  bgGradient='linear(to-r, blue.500, blue.300)'
+                  colorScheme="whiteAlpha"
+                  textColor={useColorModeValue('gray.600', 'white')}
                   display="inline-flex"
                   alignItems="center"
                   justifyContent="center"

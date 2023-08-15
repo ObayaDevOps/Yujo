@@ -281,125 +281,58 @@ const NAV_ITEMS = [
     label: 'About',
     children: [
       {
-        label: 'Who We Are',
-        subLabel: 'Our Journey',
-        href: '/about/about-us',
+        label: 'About Me',
+        subLabel: 'Professional Experience',
+        href: '/about/about-me',
       },
+      // {
+      //   label: 'FAQs',
+      //   subLabel: 'Frequently Asked Questions',
+      //   href: '/about/faqs',
+      // },
       {
-        label: 'FAQs',
-        subLabel: 'Frequently Asked Questions',
-        href: '/about/faqs',
+        label: 'CV',
+        subLabel: '',
+        href: '/about/cv',
       },
-      // {
-      //   label: 'Careers',
-      //   subLabel: 'Interested in working for us ?',
-      //   href: '/about/careers',
-      // },
-      // {
-      //   label: "How it's Made",
-      //   subLabel: 'The Tech Behind this Website',
-      //   href: '/about/how-this-was-built',
-      // },
+
     ],
   },
-  // {
-  //   label: 'Services',
-  //   children: [
-  //     // {
-  //     //   label: 'Products',
-  //     //   subLabel: 'Frames, Lenses, Contact Lens and more ...',
-  //     //   href: '/products-and-services/products',
-  //     // },
-  //     {
-  //       label: 'Services',
-  //       subLabel: 'Book Appointments, Consultations ...',
-  //       href: '/products-and-services/services',
-  //     },
-  //     {
-  //       label: 'Frame Size Guide',
-  //       subLabel: 'Guidance for the perfect glasses fit !',
-  //       href: '/products-and-services/frame-size-guide',
-  //     },
-  //   ],
-  // }, 
-  ,{
-    label: 'Book Appointment',
-    href: '/appointments/eyeTest'
-    // children: [
-    //   {
-    //     label: 'Eye Test',
-    //     subLabel: 'Modern Specialist Machinery, Great Service',
-    //     href: '/appointments/eyeTest',
-    //   },
-    //   {
-    //     label: 'Glasses Fitting',
-    //     subLabel: "For Maximal Comfort",
-    //     href: '/appointments/eyeTest',
-    //   },
-    //   {
-    //     label: 'Schedule Collection',
-    //     subLabel: 'Collect previously ordered items',
-    //     href: '/appointments/eyeTest',
-    //   }
-    // ],
-  },   
   {
-    label: 'Find Us',
+    label: 'Services',
     children: [
       {
-        label: 'Service Centres',
-        subLabel: '',
-        href: '/info/service-centres',
+        label: 'Build a Website',
+        subLabel: 'Modern Website Development Tailored to your Business',
+        href: '/products-and-services/services',
+      },
+      {
+        label: 'Build an E-Commerce Platform',
+        subLabel: 'Expand to Global Markets',
+        href: '/products-and-services/frame-size-guide',
+      },
+    ],
+  }, 
+  {
+    label: 'Pricing',
+    href: '/pricing/our-prices',
+  },  
+  {
+    label: 'Get in Touch',
+    children: [
+      {
+        label: 'Book Appointment',
+        subLabel: 'Schedule a Call',
+        href: '/appointments/eyeTest',
       },
       {
         label: 'Contact Us',
         subLabel: " ",
         href: '/info/contact-enquiry',
       },
-      // {
-      //   label: '4FR0P0C3N3 43VR',
-      //   subLabel: 'Conceptual Blockchain Art',
-      //   href: '/tech/asciiTorus',
-      // }
     ],
-  },
-  {
-    label: 'Blog',
-    href: 'https://medoptics-blog.vercel.app/',
-    // children: [
-    //   // {
-    //   //   label: 'Upcoming/Current',
-    //   //   subLabel: '',
-    //   //   href: '/exhibitions/current-exhibition',
-    //   // },
-    //   // {
-    //   //   label: 'Exhibition Archive',
-    //   //   subLabel: '',
-    //   //   href: '/exhibitions/exhibitions-archive',
-    //   // },
-    //   // {
-    //   //   label: 'Museum Of Selves',
-    //   //   subLabel: 'Collaborative Exhibition and Youth Workshop',
-    //   //   href: '/exhibitions/museum-of-selves-exhibition',
-    //   // }
-    // ],
-  },
-
-  {
-    label: 'Shop',
-    // children: [
-    //   // {
-    //   //   label: 'Upcoming/Current',
-    //   //   subLabel: '',
-    //   //   href: '/workshops/current-workshop',
-    //   // },
-    //   {
-    //     label: 'Workshop Archive',
-    //     subLabel: '',
-    //     href: '/workshops/workshops-archive',
-    //   }
-    // ],
   }
+
 ];
 
 

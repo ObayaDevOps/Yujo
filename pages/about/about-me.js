@@ -46,7 +46,7 @@ export default function SplitWithImage() {
     
     <Container maxW={'6xl'} py={12} minHeight={{md:'110vh'}}>
       <Head>
-        <title>About Us | MedOptics Ltd</title>
+        <title>About Me | DralegaWebOps</title>
         <meta name="description" content="MedOptics Ltd Webpage" />
         {/* <link rel="shortcut icon" href="../public/favicon.ico"></link> */}
         <link rel="shortcut icon" href="../../../images/icon/medoptics-logo-mini-square.jpeg"></link>
@@ -81,7 +81,7 @@ export default function SplitWithImage() {
           bgGradient='linear(to-r, green.500, green.300)'
           fontWeight="extrabold"
         >
-          Who We Are
+          About Me
         </Text>{" "}
         
       </Heading>
@@ -98,7 +98,7 @@ export default function SplitWithImage() {
             p={2}
             alignSelf={'flex-start'}
             rounded={'md'}>
-            Our Story
+            My Story
           </Text>
           <Heading>A Modern Eye-Care Specialist</Heading>
               <Text color={'gray.500'} fontSize={'lg'}>

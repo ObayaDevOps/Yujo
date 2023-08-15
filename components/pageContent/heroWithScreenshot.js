@@ -7,6 +7,7 @@ import {
   Image,
   Text,
   Icon,
+  useColorModeValue
 } from "@chakra-ui/react";
 import AScreenshot from '../../public/images/DWO/afropoceneScreenshot.png'
 import { getCloudinaryImage, getCloudinaryImageBlur } from '../../components/utils/cloudinaryImageRetreival';
@@ -18,7 +19,7 @@ export default function App(){
       <Box
         w={{ base: "full", md: 11 / 12, xl: 9 / 12 }}
         mx="auto"
-        textAlign={{ base: "left", md: "center" }}
+        textAlign={{ base: "center", md: "center" }}
       >
         <chakra.h1
           mb={6}
@@ -45,10 +46,11 @@ export default function App(){
           px={{ base: 0, lg: 24 }}
           mb={6}
           fontSize={{ base: "lg", md: "xl" }}
-          color="gray.600"
-          _dark={{ color: "gray.300" }}
+          color="gray.700"
+          textAlign="left"
+          _dark={{ color: "gray.100" }}
         >
-          We craft profitable websites for SMEs aiming to unleash business potential.
+          We craft profitable websites for SMEs and Start-Ups aiming to unleash business potential.
 	        With both Design and Performance perfectly balanced,
           we aim to Fuel Business Growth through Professional Website Development.
 
@@ -61,8 +63,8 @@ export default function App(){
         >
           <Button
             as="a"
-            variant="solid"
-            // colorScheme="brand"
+            colorScheme="whiteAlpha"
+            textColor={useColorModeValue('gray.600', 'gray.200')}
             display="inline-flex"
             alignItems="center"
             justifyContent="center"
@@ -82,7 +84,8 @@ export default function App(){
           </Button>
           <Button
             as="a"
-            colorScheme="gray"
+            colorScheme="whiteAlpha"
+            textColor={useColorModeValue('gray.600', 'gray.200')}
             display="inline-flex"
             alignItems="center"
             justifyContent="center"
@@ -110,13 +113,13 @@ export default function App(){
       >
 
         <Image
-                    w="full"
+                    // w="full"
                     rounded="lg"
                     shadow="2xl"
                     src={getCloudinaryImage('afropoceneScreenshot_qwd27h.jpg')} 
                     alt="Hellonext feedback boards software screenshot"
-                    // width={1349}
-                    // height={1450} 
+                    // width={3675/2.5}
+                    // height= {2001/2.5}
                     placeholder="blur"
                     blurDataURL={getCloudinaryImageBlur('afropoceneScreenshot_qwd27h.jpg')}
         />  
