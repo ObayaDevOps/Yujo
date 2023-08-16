@@ -25,8 +25,6 @@ import {
 } from '@chakra-ui/icons';
 
 import NextImage from 'next/image'
-import africaIcon from '../../public/images/icon/africa.png'
-import africaIconWhite from '../../public/images/icon/africa-white-icon.png'
 
 import DWOLOGO from '../../public/images/icon/DWOLogo.png'
 

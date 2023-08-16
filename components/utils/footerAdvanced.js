@@ -16,22 +16,22 @@ import {
     InputGroup,
     InputLeftElement,
     useColorModeValue,
+    useColorMode,
+
   } from '@chakra-ui/react';
   import { ReactNode } from 'react';
   import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa';
   import { BiMailSend } from 'react-icons/bi';
   import NextLink from 'next/link'
 
-  import MedOptics20Years from '../../public/images/icon/Med-Optics.svg'
-  import Top100Companies from '../../public/images/icon/Top100Logo.svg'
 
-  import DWOLOGO from '../../public/images/icon/DWOLogo.png'
 
-  import Image from 'next/image'
+  import NextImage from 'next/image'
   import { MdEmail, MdOutlineEmail, MdPhone } from 'react-icons/md';
 
   import { useState } from 'react'
 
+  import { getCloudinaryImage, getCloudinaryImageBlur } from '../../components/utils/cloudinaryImageRetreival';
 
 
 
@@ -112,6 +112,7 @@ import {
       })
     }
   
+    const { colorMode, toggleColorMode } = useColorMode()
 
 
 
@@ -129,8 +130,17 @@ import {
             <Stack spacing={6} >
               <Box text="left">
                 <NextLink href='/#'>
-                  <Image src={useColorModeValue( DWOLOGO,DWOLOGO)} width={595} height={134}/>
-                </NextLink>            
+                <NextImage
+                  rounded="lg"
+                  shadow="2xl"
+                  src={ colorMode === 'light' ? getCloudinaryImage('Black_And_White_Modern_Vintage_Retro_Brand_Logo_b4pr7b.jpg'): getCloudinaryImage('Black_And_White_Modern_Vintage_Retro_Brand_Logo_1_ds7jor.jpg') } 
+                  alt="Hellonext feedback boards software screenshot"
+                  width={325}
+                  height={325}
+                  placeholder="blur"
+                  blurDataURL={getCloudinaryImageBlur('Med-Optics_ly2gge.jpg')}
+              />                
+        </NextLink>            
                 </Box>
               <Text fontSize={'sm'}>
                 © 2023 Dralega Web Operations. All rights reserved
@@ -177,101 +187,7 @@ import {
 
 
             </Stack>
-            <Stack align={'flex-start'}>
-              <ListHeader>Stay up to date</ListHeader>
-              <Stack direction={'row'}>
-              <form onSubmit={(e) => userData(e)}>
-                  {/* <Input
-                    placeholder={'Your email address'}
-                    bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-                    border={0}
-                    _focus={{
-                      bg: 'whiteAlpha.300',
-                    }}
-                  /> */}
 
-<FormControl isRequired>
-
-<InputGroup>
-                        <InputLeftElement>
-                          <MdOutlineEmail />
-                        </InputLeftElement>
-                        <Input
-                          id="email"
-                          type="email"
-                          name="email"
-                          placeholder="Your Email"
-                        />
-                      </InputGroup>
-                    </FormControl>
-
-
-
-                  {/* <IconButton
-                    bg={useColorModeValue('green.400', 'green.800')}
-                    color={useColorModeValue('white', 'gray.800')}
-                    _hover={{
-                      bg: 'green.600',
-                    }}
-                    aria-label="Subscribe"
-                    icon={<BiMailSend />}
-                    type="submit"
-                    onClick={() =>
-                      toast({
-                        title: 'Message Sent.',
-                        description: "We will get back to you soon!",
-                        status: 'success',
-                        duration: 9000,
-                        isClosable: true,
-                      })}
-                  /> */}
-
-                    <Button
-                    type="submit"
-                      colorScheme="green"
-                      bg="green.400"
-                      color="white"
-                      _hover={{
-                        bg: 'green.500',
-                      }}
-                      p={2}
-                      onClick={() =>
-                        toast({
-                          title: 'Email Submitted !.',
-                          description: "We will get back to you soon!",
-                          status: 'success',
-                          duration: 9000,
-                          isClosable: true,
-                        })}
-      
-                        size='xs'
-                      >
-                      Submit Email
-                    </Button>
-
-
-              </form>
-                </Stack>
-
-              <Text fontSize={'sm'} fontWeight={"bold"}>   
-                Address
-              </Text>
-
-              <Text fontSize={'sm'}>   
-                  UMA Show Grounds, Plot 63 Jinja Road, Kampala
-              </Text>
-
-              <Text fontSize={'sm'} fontWeight={"bold"}>   
-                Hours
-              </Text>
-
-              <Text fontSize={'sm'}>      
-                Monday—Friday: 8:00AM–5:00PM
-              </Text>
-              <Text fontSize={'sm'}>      
-                Saturday: 9:00AM–5:00PM
-              </Text>
-            </Stack>
           </SimpleGrid>
         </Container>
       </Box>

@@ -1,5 +1,8 @@
 'use client'
 
+import React, { useRef } from "react";
+import { useInView } from "framer-motion";
+  
 import {
   Box,
   Container,
@@ -12,7 +15,8 @@ import {
   VStack,
   Show,
   useColorModeValue,
-  useColorMode
+  useColorMode,
+  ScaleFade
 } from '@chakra-ui/react'
 import { CheckIcon } from '@chakra-ui/icons'
 
@@ -55,11 +59,18 @@ const features = [
 export default function GridListWithHeading() {
   const { colorMode } = useColorMode()
 
+  const ref = useRef(null)
+  const isInView = useInView(ref)
+
   return (
+    <ScaleFade initialScale={0.6}
+    in={isInView}>
     <Box
     w={{ base: "full", md: 11 / 12, xl: 9 / 12 }}
     mx="auto"
     pb={25}
+    ref={ref}
+
   >
     <Box p={4}>
       <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
@@ -100,6 +111,7 @@ export default function GridListWithHeading() {
             background="rgba(192,192,192,0.15)"
             border='30px'
             shadow={'xl'}
+            
             >
 
             <HStack key={feature.id} align={'top'} >
@@ -118,6 +130,6 @@ export default function GridListWithHeading() {
       </Container>
     </Box>
     </Box>
-
+    </ScaleFade>
   )
 }

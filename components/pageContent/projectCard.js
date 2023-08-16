@@ -11,19 +11,48 @@ import {
   Container,
   Avatar,
   useColorModeValue,
-  useColorMode
+  useColorMode,
+  ScaleFade
 } from '@chakra-ui/react'
 
+
+
+import React, { useRef } from "react";
+import { useInView } from "framer-motion";
+  
 import { getCloudinaryImage, getCloudinaryImageBlur } from '../../components/utils/cloudinaryImageRetreival';
 
 
 //put this in a carousel
 export default function blogPostWithImage() {
+  const scaleFactor = 0.4;
+
   const { colorMode } = useColorMode()
 
+  const ref1 = useRef(null)
+  const isInView1 = useInView(ref1)
+
+  const ref2 = useRef(null)
+  const isInView2 = useInView(ref2)
+
+  const ref3 = useRef(null)
+  const isInView3 = useInView(ref3)
+
+  const ref4 = useRef(null)
+  const isInView4 = useInView(ref4)
+
+  const ref5 = useRef(null)
+  const isInView5 = useInView(ref5)
+
   return (
+    
     <Box p={4}>
-      <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}pt={{md:40}} >
+
+<ScaleFade initialScale={0.6}
+    in={isInView1}>
+
+      <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}pt={{md:40}}     ref={ref1}
+ >
       {colorMode === 'light' && (
         <Heading fontSize={{base: '7xl', md:'8xl'}} bgClip="text"
             bgGradient="linear(to-r, black, whiteAlpha.100)"
@@ -43,10 +72,15 @@ export default function blogPostWithImage() {
           Past Clients that we have been happy to work with
         </Text>
       </Stack>
+      </ScaleFade>
 
-
+    
     <Center>
       <VStack padding={{md:15}} spacing={12}>
+      
+      <ScaleFade initialScale={scaleFactor}
+    in={isInView2}>
+
       <Box
         maxW={{base: '80vw', md: '60vw'}}
         w={'full'}
@@ -55,7 +89,9 @@ export default function blogPostWithImage() {
         boxShadow={'2xl'}
         rounded={'md'}
         p={10}
-        overflow={'hidden'}>
+        overflow={'hidden'}
+        ref={ref2}
+        >
         <Box  maxW={{md:'75vw'}} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'} >
             <Image
                         // w="full"
@@ -92,7 +128,10 @@ export default function blogPostWithImage() {
           </Text>
         </Stack>
       </Box>
+      </ScaleFade>
 
+      <ScaleFade initialScale={scaleFactor}
+    in={isInView3}>
       <Box
         maxW={{base: '80vw', md: '60vw'}}
         w={'full'}
@@ -101,7 +140,10 @@ export default function blogPostWithImage() {
         boxShadow={'2xl'}
         rounded={'md'}
         p={10}
-        overflow={'hidden'}>
+        overflow={'hidden'}
+        ref={ref3}
+
+        >
         <Box  maxW={'75vw'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'} >
             <Image
                         // w="full"
@@ -140,7 +182,10 @@ United Nations Development Program in 2023.
           </Text>
         </Stack>
       </Box>
+      </ScaleFade>
 
+      <ScaleFade initialScale={scaleFactor}
+    in={isInView4}>
       <Box
         maxW={{base: '80vw', md: '60vw'}}
         w={'full'}
@@ -149,7 +194,10 @@ United Nations Development Program in 2023.
         boxShadow={'2xl'}
         rounded={'md'}
         p={10}
-        overflow={'hidden'}>
+        overflow={'hidden'}
+        ref={ref4}
+
+        >
         <Box  maxW={'75vw'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'} >
             <Image
                         // w="full"
@@ -188,8 +236,13 @@ United Nations Development Program in 2023.
         </Text>
         </Stack>
       </Box>
+      </ScaleFade>
+
+
       </VStack>
       </Center>
+
+
       </Box>
   )
 }
