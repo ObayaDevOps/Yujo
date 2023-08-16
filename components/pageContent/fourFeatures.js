@@ -10,7 +10,9 @@ import {
   Stack,
   HStack,
   VStack,
-  useColorModeValue
+  Show,
+  useColorModeValue,
+  useColorMode
 } from '@chakra-ui/react'
 import { CheckIcon } from '@chakra-ui/icons'
 
@@ -51,19 +53,33 @@ const features = [
 ];
 
 export default function GridListWithHeading() {
+  const { colorMode } = useColorMode()
+
   return (
     <Box
     w={{ base: "full", md: 11 / 12, xl: 9 / 12 }}
     mx="auto"
-    pb={15}
+    pb={25}
   >
     <Box p={4}>
       <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
-        <Heading fontSize={{base:'6xl',md:'8xl'}} bgClip="text"
-            bgGradient="linear(to-r, white, whiteAlpha.700)"
-            // textColor="white"
-            fontWeight="extrabold">
-              Website Features</Heading>
+      {colorMode === 'light' && (
+          <Heading fontSize={{base:'6xl',md:'8xl'}} bgClip="text"
+              bgGradient="linear(to-r, black, whiteAlpha.100)"
+              // textColor="white"
+              fontWeight="extrabold">
+                Website Features
+          </Heading>
+      )}
+      {colorMode === 'dark' && (
+          <Heading fontSize={{base:'6xl',md:'8xl'}} bgClip="text"
+          bgGradient="linear(to-r, white, whiteAlpha.500)"
+          fontWeight="extrabold"
+          >
+            Website Features
+          </Heading>
+      )}
+
         <Text color={useColorModeValue('gray.600', 'gray.200')}  fontWeight={200} fontSize={'xl'}>
         A modern brand is defined by its digital presence, starting with the website.
         We focus on creating websites that effectively convey the brand's identity and perspective, then optimize for an enhanced user experience.
@@ -83,16 +99,16 @@ export default function GridListWithHeading() {
             // opacity={0.15}
             background="rgba(192,192,192,0.15)"
             border='30px'
-            
+            shadow={'xl'}
             >
 
             <HStack key={feature.id} align={'top'} >
-              <Box color={'green.400'} px={2}>
+              <Box color={'green.400'} px={2} >
                 <Icon as={CheckIcon} />
               </Box>
               <VStack align={'start'}>
-                <Text fontWeight={800} fontSize={'xl'}>{feature.title}</Text>
-                <Text color={useColorModeValue('gray.600', 'gray.100')}
+                <Text color={useColorModeValue('black', 'gray.100')} fontWeight={800} fontSize={'xl'}>{feature.title}</Text>
+                <Text color={useColorModeValue('black', 'gray.100')}
                 fontSize={'lg'}>{feature.text}</Text>
               </VStack>
             </HStack>

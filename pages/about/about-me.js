@@ -100,9 +100,31 @@ export default function SplitWithImage() {
             rounded={'md'}>
             My Story
           </Text>
-          <Heading>A Modern Eye-Care Specialist</Heading>
+          <Heading>A Computer Scientist with 6 Years Experience</Heading>
+              <Text color={useColorModeValue('gray.800', 'gray.100')} fontSize={'lg'}>
+                Tech Lead and Code Artist at Afropocene StudioLab {"\n"}
+              </Text>
               <Text color={'gray.500'} fontSize={'lg'}>
-              Mr Anguyo Dralega our founder and Managing director returned from the UK in 2001 to contribute to the development of Optometry in Uganda. Having completed his Masters of Optometry at the University of Bradford in the UK, he returned home to find a fledgeling industry: no regulation, no standards and no accountability. Thus Med-Optics was borne of the conviction that Uganda can and should have high quality, accurate vision care services.
+                Founder and Beekeeper at Humble Beeing
+              </Text>
+
+              <Text color={'gray.500'} fontSize={'lg'}>
+                I build random crypto-related trading bots - Optimus Dime, ArbiTriangle , Ftx-Auto-Compounding-Kit(FAcK) , TopsyTurvsy.
+                I make random crypto-related art
+              </Text>
+              
+              <Text color={'gray.500'} fontSize={'lg'}>
+                Welcome to my website - a space for my personal musings and experiments ! Find me on Twitter
+              </Text>
+
+              <Text color={'gray.500'} fontSize={'lg'}>
+              Background; I did CompSci at the University of Manchester, then did a summer internship at Credit Suisse London and then joined as a Technical Analyst after I graduated.
+
+              I worked in Electronic Bond Trading, connecting CS to a new Brokerage using FIX, then moved to a Big-Data Team, doing real-time stream processing and dashboarding (Java, SpringBoot, React, Kafka, Cassandra) at terabytes-per-second scale for FX Risk Data.
+
+              After a few years I got promoted to Assistant Vice President and moved to another CS Team, Equity Derivatives IT. Working in Scala, a functional language, on the Real-time pricing, taking in data from markets and risk engines to adjust prices for each derivative.
+
+              Pandemic put things into perspective. Decided to resign and forge my own path.
               </Text>
           <Stack
             spacing={4}
@@ -120,7 +142,7 @@ export default function SplitWithImage() {
               iconBg={useColorModeValue('yellow.100', 'yellow.900')}
               text={'Registered with the Optical Council UK '}
             />
-            <Feature
+            {/* <Feature
               icon={<Icon as={IoLogoBitcoin} color={'green.500'} w={5} h={5} />}
               iconBg={useColorModeValue('green.100', 'green.900')}
               text={'Member of the Association of Optometrists, UK'}
@@ -159,7 +181,7 @@ export default function SplitWithImage() {
               }
               iconBg={useColorModeValue('purple.100', 'purple.900')}
               text={'Accredited member of the Ultra Lase Eye-Care Co-management scheme: for pre and post laser operation screening, UK.'}
-            />
+            /> */}
 
             
             
@@ -169,12 +191,12 @@ export default function SplitWithImage() {
             w="full"
             rounded="lg"
             shadow="2xl"
-            src={getCloudinaryImage('anguyo.jpg')} 
+            src={getCloudinaryImage('obaya_oftggu.jpg')} 
             alt="Hellonext feedback boards software screenshot"
             width={500}
             height={500} 
             placeholder="blur"
-            blurDataURL={getCloudinaryImageBlur('anguyo.jpg')}
+            blurDataURL={getCloudinaryImageBlur('obaya_oftggu.jpg')}
           />
       </SimpleGrid>
     </Container>

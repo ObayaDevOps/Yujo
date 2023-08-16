@@ -72,6 +72,8 @@ export default function App(){
             mb={{ base: 2, sm: 0 }}
             size="lg"
             cursor="pointer"
+            shadow={'xl'}
+
           >
             Get Started
             <Icon boxSize={4} ml={1} viewBox="0 0 20 20" fill="currentColor">
@@ -93,6 +95,7 @@ export default function App(){
             mb={{ base: 2, sm: 0 }}
             size="lg"
             cursor="pointer"
+            shadow={'lg'}
           >
             Book a Demo
             <Icon boxSize={4} ml={1} viewBox="0 0 20 20" fill="currentColor">

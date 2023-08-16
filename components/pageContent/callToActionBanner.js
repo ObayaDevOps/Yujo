@@ -59,6 +59,8 @@ export default function CallToActionBanner(){
                 alignItems="center"
                 justifyContent="center"
                 fontFamily="Helvetica"
+                shadow={'lg'}
+
                 w={{
                     base: "full",
                     sm: "auto",
@@ -90,6 +92,8 @@ export default function CallToActionBanner(){
                   display="inline-flex"
                   alignItems="center"
                   justifyContent="center"
+                  shadow={'lg'}
+
                   w={{
                       base: "full",
                       sm: "auto",

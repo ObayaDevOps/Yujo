@@ -30,6 +30,9 @@ import africaIconWhite from '../../public/images/icon/africa-white-icon.png'
 
 import DWOLOGO from '../../public/images/icon/DWOLogo.png'
 
+import { getCloudinaryImage, getCloudinaryImageBlur } from '../../components/utils/cloudinaryImageRetreival';
+
+
 
 import NextLink from 'next/link'
 import { MdNightlight } from 'react-icons/md';
@@ -64,7 +67,7 @@ export default function WithSubnavigation() {
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.600', 'white')}
         minH={'60px'}
-        py={{ base: 2 }}
+        py={{ base: 2}}
         px={{ base: 4 }}
         // borderBottom={1}
         borderStyle={'solid'}
@@ -84,10 +87,23 @@ export default function WithSubnavigation() {
             aria-label={'Toggle Navigation'}
           />
         </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+        <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }} ml={{base:-85, md: 0}}>
         <NextLink href='/#' passHref>
           <Link>
-              <NextImage src={colorMode === 'light' ? DWOLOGO:  DWOLOGO} width={40} height={40}/>
+              {/* <NextImage src={colorMode === 'light' ? DWOLOGO:  DWOLOGO} width={40} height={40}/> */}
+              <NextImage
+            
+                    // w="full"
+                    rounded="lg"
+                    shadow="2xl"
+                    src={ colorMode === 'light' ? getCloudinaryImage('Black_And_White_Modern_Vintage_Retro_Brand_Logo_b4pr7b.jpg'): getCloudinaryImage('Black_And_White_Modern_Vintage_Retro_Brand_Logo_1_ds7jor.jpg') } 
+                    alt="Hellonext feedback boards software screenshot"
+                    width={125}
+                    height={125}
+                    placeholder="blur"
+                    blurDataURL={getCloudinaryImageBlur('Med-Optics_ly2gge.jpg')}
+                />
+              
           </Link>
         </NextLink>
 
@@ -96,13 +112,15 @@ export default function WithSubnavigation() {
           </Flex>
         </Flex>
 
-        <Stack
-          flex={{ base: 1, md: 0 }}
-          justify={'flex-end'}
-          direction={'row'}
-          spacing={6}>
+        <Flex
+          // flex={{ base: 1, md: 0 }}
+          // justify={'flex-end'}
+          // direction={'row'}
+          // spacing={6}
+          mt={{md:-12}}
+          >
           <DarkToggleButton />
-        </Stack>
+        </Flex>
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
@@ -120,7 +138,7 @@ const DesktopNav = () => {
 
 
   return (
-    <Stack direction={'row'} spacing={4} paddingTop={1.5}>
+    <Stack direction={'row'} spacing={4} paddingTop={{md:8}}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
@@ -128,7 +146,7 @@ const DesktopNav = () => {
               <PopoverTrigger>
                 <Link
                 p={2}
-                fontSize={'sm'}
+                fontSize={'md'}
                 href={navItem.href ?? '#'}
                 fontWeight={500}
                 color={linkColor}
@@ -293,7 +311,7 @@ const NAV_ITEMS = [
       {
         label: 'CV',
         subLabel: '',
-        href: '/about/cv',
+        href:"https://pdfhost.io/v/TgnGelt~0_Obaya_Dralega_CV_2023",
       },
 
     ],

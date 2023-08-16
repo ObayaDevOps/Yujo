@@ -11,6 +11,7 @@ import {
   Container,
   Avatar,
   useColorModeValue,
+  useColorMode
 } from '@chakra-ui/react'
 
 import { getCloudinaryImage, getCloudinaryImageBlur } from '../../components/utils/cloudinaryImageRetreival';
@@ -18,13 +19,26 @@ import { getCloudinaryImage, getCloudinaryImageBlur } from '../../components/uti
 
 //put this in a carousel
 export default function blogPostWithImage() {
+  const { colorMode } = useColorMode()
+
   return (
     <Box p={4}>
-      <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'} pt={20}>
+      <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}pt={{md:40}} >
+      {colorMode === 'light' && (
         <Heading fontSize={{base: '7xl', md:'8xl'}} bgClip="text"
-            bgGradient="linear(to-r, white, whiteAlpha.700)"
+            bgGradient="linear(to-r, black, whiteAlpha.100)"
             fontWeight="extrabold">
-              Our Work</Heading>
+              Our Work
+        </Heading>)}
+
+      {colorMode === 'dark' && (
+        <Heading fontSize={{base: '7xl', md:'8xl'}} bgClip="text"
+            bgGradient="linear(to-r, white, whiteAlpha.500)"
+            fontWeight="extrabold">
+              Our Work
+        </Heading>)}
+
+
         <Text color={useColorModeValue('gray.600', 'gray.200')}   fontSize={'xl'} p={5}>
           Past Clients that we have been happy to work with
         </Text>
