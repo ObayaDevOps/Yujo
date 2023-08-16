@@ -1,4 +1,3 @@
-import React from "react";
 import {
   chakra,
   Box,
@@ -7,13 +6,20 @@ import {
   Image,
   Text,
   Icon,
-  useColorModeValue
+  useColorModeValue,
+  useColorMode,
+  SlideFade
 } from "@chakra-ui/react";
-import AScreenshot from '../../public/images/DWO/afropoceneScreenshot.png'
 import { getCloudinaryImage, getCloudinaryImageBlur } from '../../components/utils/cloudinaryImageRetreival';
 
+import React, { useRef } from "react";
+import { useInView } from "framer-motion";
+  
 
 export default function App(){
+
+  const ref = useRef(null)
+  const isInView = useInView(ref)
   return (
     <Box px={8} py={24} mx="auto">
       <Box
@@ -108,11 +114,15 @@ export default function App(){
           </Button>
         </Stack>
       </Box>
+
+      <SlideFade offsetY={200}
+    in={isInView}>
       <Box
         w={{ base: "full", md: 10 / 12 }}
         mx="auto"
         mt={20}
         textAlign="center"
+        ref={ref}
       >
 
         <Image
@@ -127,6 +137,9 @@ export default function App(){
                     blurDataURL={getCloudinaryImageBlur('afropoceneScreenshot_qwd27h.jpg')}
         />  
       </Box>
+      </SlideFade>
+
+
     </Box>
   );
 };

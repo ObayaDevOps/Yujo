@@ -13,7 +13,6 @@ import {
   Stack,
   HStack,
   VStack,
-  Show,
   useColorModeValue,
   useColorMode,
   ScaleFade

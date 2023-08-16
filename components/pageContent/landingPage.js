@@ -39,6 +39,7 @@ export default function CallToActionWithAnnotation() {
           rel="stylesheet"
         />
       </Head>
+      
       <Blur
         position={'fixed'}
         top={'30vh'}
