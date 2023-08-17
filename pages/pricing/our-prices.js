@@ -173,7 +173,7 @@ export default function App(){
                     roundedBottom="md"
                   >
                     <Stack mb={5} spacing={4} >
-                      <Feature>5-Page Mobile-Friendly Website [ Landing Page, About Us, Products, Services Contact Us ] </Feature>
+                      <Feature>4-Page Website: Landing Page, About Us, Products and Services, Contact Us </Feature>
                       <Feature>Sanity CMS - Update your website yourself</Feature>
                       <Feature>Market Leading SEO and Visitor Analytics</Feature>
 
@@ -253,7 +253,7 @@ export default function App(){
                       color="gray.500"
                       _dark={{ color: "gray.100" }}
                     >
-                      Start attracting customers to interact with your site and take data from them to inform your business decisions.
+                      Start attracting customers to interact with your site and take data from them to inform your business decisions. Perfect for Hotels, Restaurants and SMEs.
                     </chakra.p>
                   </Box>
                   <Flex
@@ -266,9 +266,10 @@ export default function App(){
                     roundedBottom="md"
                   >
                     <Stack mb={5} spacing={4}>
-                      <Feature>6-Page Mobile-Friendly Website [ Landing Page, About Us, Products, Services Contact Us, Bookings Calendar, FAQs, Light/Dark Mode ]</Feature>
+                      <Feature>6-Page Website: Landing Page, About Us, Products and Services, Contact Us, Bookings Calendar, FAQs </Feature>
                       <Feature>Sanity CMS: Update Website Content Yourself</Feature>
                       <Feature>A.I Chatbots</Feature>
+                      <Feature>Light/Dark Mode</Feature>
                       <Feature>Bookings Calendar</Feature>
                       <Feature>Market Leading SEO and Visitor Analytics</Feature>
                       <Feature>Built with Next.Js</Feature>
@@ -347,7 +348,8 @@ export default function App(){
                       color="gray.500"
                       _dark={{ color: "gray.100" }}
                     >
-                      Take online payments, inform users on your product offerings with a high performant storefront.
+                      The World is your Oyster. Expand your business globally!
+                      Take online payments, inform users on your product offerings with a high performance storefront.
                     </chakra.p>
                   </Box>
                   <Flex
@@ -361,7 +363,8 @@ export default function App(){
                   >
                     <Stack mb={5} spacing={4}>
                     <Feature>6-Page Mobile-Friendly Website</Feature>
-                      <Feature>MedusaJS: Update WebShop Content Yourself</Feature>
+                      <Feature>MedusaJS: Open-Source Building blocks for digital commerce</Feature>
+                      <Feature>Shopify: The global commerce platform</Feature>
                       <Feature>Sanity CMS: Update Website Content Yourself</Feature>
                       <Feature>Bookings Calendar</Feature>
                       <Feature>SEO Optimisation</Feature>

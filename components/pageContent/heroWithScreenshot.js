@@ -14,7 +14,7 @@ import { getCloudinaryImage, getCloudinaryImageBlur } from '../../components/uti
 
 import React, { useRef } from "react";
 import { useInView } from "framer-motion";
-  
+import NextLink from 'next/link'
 
 export default function App(){
 
@@ -67,6 +67,7 @@ export default function App(){
           spacing={2}
           justifyContent={{ sm: "left", md: "center" }}
         >
+          <NextLink href="/pricing/our-prices" passHref>
           <Button
             as="a"
             colorScheme="whiteAlpha"
@@ -79,7 +80,6 @@ export default function App(){
             size="lg"
             cursor="pointer"
             shadow={'xl'}
-
           >
             See our Pricing
             <Icon boxSize={4} ml={1} viewBox="0 0 20 20" fill="currentColor">
@@ -90,6 +90,8 @@ export default function App(){
               />
             </Icon>
           </Button>
+          </NextLink>
+          <NextLink href="/info/contact-enquiry" passHref>
           <Button
             as="a"
             colorScheme="whiteAlpha"
@@ -112,6 +114,8 @@ export default function App(){
               />
             </Icon>
           </Button>
+          </NextLink>
+
         </Stack>
       </Box>
 
