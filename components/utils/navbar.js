@@ -90,14 +90,13 @@ export default function WithSubnavigation() {
           <Link>
               {/* <NextImage src={colorMode === 'light' ? DWOLOGO:  DWOLOGO} width={40} height={40}/> */}
               <NextImage
-            
                     // w="full"
                     rounded="lg"
                     shadow="2xl"
                     src={ colorMode === 'light' ? getCloudinaryImage('Black_And_White_Modern_Vintage_Retro_Brand_Logo_b4pr7b.jpg'): getCloudinaryImage('Black_And_White_Modern_Vintage_Retro_Brand_Logo_1_ds7jor.jpg') } 
                     alt="Hellonext feedback boards software screenshot"
-                    width={125}
-                    height={125}
+                    width={115}
+                    height={115}
                     placeholder="blur"
                     blurDataURL={getCloudinaryImageBlur('Med-Optics_ly2gge.jpg')}
                 />
@@ -314,21 +313,21 @@ const NAV_ITEMS = [
 
     ],
   },
-  {
-    label: 'Services',
-    children: [
-      {
-        label: 'Build a Website',
-        subLabel: 'Modern Website Development Tailored to your Business',
-        href: '/products-and-services/services',
-      },
-      {
-        label: 'Build an E-Commerce Platform',
-        subLabel: 'Expand to Global Markets',
-        href: '/products-and-services/frame-size-guide',
-      },
-    ],
-  }, 
+  // {
+  //   label: 'Services',
+  //   children: [
+  //     {
+  //       label: 'Build a Website',
+  //       subLabel: 'Modern Website Development Tailored to your Business',
+  //       href: '/products-and-services/services',
+  //     },
+  //     {
+  //       label: 'Build an E-Commerce Platform',
+  //       subLabel: 'Expand to Global Markets',
+  //       href: '/products-and-services/frame-size-guide',
+  //     },
+  //   ],
+  // }, 
   {
     label: 'Pricing',
     href: '/pricing/our-prices',
@@ -336,11 +335,11 @@ const NAV_ITEMS = [
   {
     label: 'Get in Touch',
     children: [
-      {
-        label: 'Book Appointment',
-        subLabel: 'Schedule a Call',
-        href: '/appointments/eyeTest',
-      },
+      // {
+      //   label: 'Book Appointment',
+      //   subLabel: 'Schedule a Call',
+      //   href: '/appointments/eyeTest',
+      // },
       {
         label: 'Contact Us',
         subLabel: " ",

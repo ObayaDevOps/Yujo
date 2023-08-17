@@ -115,14 +115,12 @@ export default function App(){
         </Stack>
       </Box>
 
-      <SlideFade offsetY={200}
-    in={isInView}>
+
       <Box
         w={{ base: "full", md: 10 / 12 }}
         mx="auto"
         mt={20}
         textAlign="center"
-        ref={ref}
       >
 
         <Image
@@ -135,9 +133,10 @@ export default function App(){
                     // height= {2001/2.5}
                     placeholder="blur"
                     blurDataURL={getCloudinaryImageBlur('afropoceneScreenshot_qwd27h.jpg')}
+                    ref={ref}
+
         />  
       </Box>
-      </SlideFade>
 
 
     </Box>
