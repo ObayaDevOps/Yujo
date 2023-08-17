@@ -81,7 +81,7 @@ export default function App(){
             shadow={'xl'}
 
           >
-            Get Started
+            See our Pricing
             <Icon boxSize={4} ml={1} viewBox="0 0 20 20" fill="currentColor">
               <path
                 fillRule="evenodd"
@@ -103,7 +103,7 @@ export default function App(){
             cursor="pointer"
             shadow={'lg'}
           >
-            Book a Demo
+            Get in Contact
             <Icon boxSize={4} ml={1} viewBox="0 0 20 20" fill="currentColor">
               <path
                 fillRule="evenodd"

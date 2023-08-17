@@ -10,16 +10,35 @@ import {
   SimpleGrid,
   Icon,
   Link,
+  useColorMode,
+  Heading,
   Badge,
 } from "@chakra-ui/react";
 
+import Head from 'next/head'
+
 export default function App(){
   const topBg = useColorModeValue("gray.800", "gray.700");
-  const bottomBg = useColorModeValue("white", "gray.800");
+  const bottomBg = useColorModeValue("gray.800", "gray.800");
   const [bottomBgHex] = useToken("colors", [bottomBg]);
+
+  const { colorMode } = useColorMode()
+
+
   const Feature = (props) => {
     return (
       <Flex align="center">
+
+        <Head>
+        <title>Our Prices | Dralega Web Operations Ltd</title>
+        <meta name="description" content="Dralega Web Operations Ltd Webpage" />
+        <link rel="shortcut icon" href="../../../images/icon/DWOLogo.png"></link>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" 
+        rel="stylesheet" />
+        </Head>
+
+
         <Flex shrink={0}>
           <Icon
             boxSize={5}
@@ -64,14 +83,13 @@ export default function App(){
       >
         <Box pt={20} rounded="md" bg={topBg}>
           <Box w="full" px={[10, , 4]} mx="auto">
-            <chakra.p
-              fontSize={["lg", , "xl"]}
-              color="gray.300"
-              textTransform="uppercase"
-              fontWeight="semibold"
-            >
+
+        <Heading fontSize={{base: '7xl', md:'8xl'}} bgClip="text"
+            bgGradient="linear(to-r, white, whiteAlpha.800)"
+            fontWeight="extrabold">
               Our Pricing
-            </chakra.p>
+        </Heading>
+
             <Text
               mb={2}
               fontSize={["2xl", , "5xl"]}
@@ -125,7 +143,7 @@ export default function App(){
                       _dark={{ color: "gray.50" }}
                       lineHeight="tight"
                     >
-                      $750+
+                      $850+
                       <chakra.span
                         fontSize="2xl"
                         fontWeight="medium"
@@ -142,7 +160,7 @@ export default function App(){
                       color="gray.500"
                       _dark={{ color: "gray.100" }}
                     >
-                      Just starting your business but need a professional web presence? This is the package for you !
+                      Just starting your business but need a professional web presence? This is the package for you!
                     </chakra.p>
                   </Box>
                   <Flex
@@ -155,11 +173,14 @@ export default function App(){
                     roundedBottom="md"
                   >
                     <Stack mb={5} spacing={4} >
-                      <Feature>5-Page Mobile-Friendly Website</Feature>
-                      <Feature>SEO Optimisation</Feature>
+                      <Feature>5-Page Mobile-Friendly Website [ Landing Page, About Us, Products, Services Contact Us ] </Feature>
+                      <Feature>Sanity CMS - Update your website yourself</Feature>
+                      <Feature>Market Leading SEO and Visitor Analytics</Feature>
+
+                      <Feature>Mobile Friendly Design - Optimised for Ugandan Internet</Feature>
                       <Feature>Built with Next.Js</Feature>
                     </Stack>
-                    <Link
+                    {/* <Link
                       w="full"
                       display="inline-flex"
                       alignItems="center"
@@ -179,7 +200,7 @@ export default function App(){
                       }}
                     >
                       Get started
-                    </Link>
+                    </Link> */}
                   </Flex>
                 </Flex>
               </Box>
@@ -232,7 +253,7 @@ export default function App(){
                       color="gray.500"
                       _dark={{ color: "gray.100" }}
                     >
-                      Start attracting customers to ineract with your site and take data from them to inform your business decisions.
+                      Start attracting customers to interact with your site and take data from them to inform your business decisions.
                     </chakra.p>
                   </Box>
                   <Flex
@@ -245,14 +266,14 @@ export default function App(){
                     roundedBottom="md"
                   >
                     <Stack mb={5} spacing={4}>
-                      <Feature>6-Page Mobile-Friendly Website</Feature>
+                      <Feature>6-Page Mobile-Friendly Website [ Landing Page, About Us, Products, Services Contact Us, Bookings Calendar, FAQs, Light/Dark Mode ]</Feature>
                       <Feature>Sanity CMS: Update Website Content Yourself</Feature>
+                      <Feature>A.I Chatbots</Feature>
                       <Feature>Bookings Calendar</Feature>
-                      <Feature>SEO Optimisation</Feature>
-                      <Feature>User Analytics</Feature>
+                      <Feature>Market Leading SEO and Visitor Analytics</Feature>
                       <Feature>Built with Next.Js</Feature>
                     </Stack>
-                    <Link
+                    {/* <Link
                       w="full"
                       display="inline-flex"
                       alignItems="center"
@@ -272,7 +293,7 @@ export default function App(){
                       }}
                     >
                       Get started
-                    </Link>
+                    </Link> */}
                   </Flex>
                 </Flex>
               </Box>
@@ -309,7 +330,7 @@ export default function App(){
                       _dark={{ color: "gray.50" }}
                       lineHeight="tight"
                     >
-                      $3250+
+                      $3350+
                       <chakra.span
                         fontSize="2xl"
                         fontWeight="medium"
@@ -347,7 +368,7 @@ export default function App(){
                       <Feature>User Analytics</Feature>
                       <Feature>Built with Next.Js</Feature>
                     </Stack>
-                    <Link
+                    {/* <Link
                       w="full"
                       display="inline-flex"
                       alignItems="center"
@@ -367,7 +388,7 @@ export default function App(){
                       }}
                     >
                       Get started
-                    </Link>
+                    </Link> */}
                   </Flex>
                 </Flex>
               </Box>
@@ -434,12 +455,12 @@ export default function App(){
                     roundedBottom="md"
                   >
                     <Stack mb={5} spacing={4}>
-                      <Feature>Granular access controls</Feature>
+                      <Feature>Cryptocurrency and Web3 Projects</Feature>
                       <Feature>Custom components</Feature>
                       <Feature>Deploy on-premises</Feature>
                       <Feature>Identity management</Feature>
                     </Stack>
-                    <Link
+                    {/* <Link
                       w="full"
                       display="inline-flex"
                       alignItems="center"
@@ -459,7 +480,7 @@ export default function App(){
                       }}
                     >
                       Get started
-                    </Link>
+                    </Link> */}
                   </Flex>
                 </Flex>
               </Box>

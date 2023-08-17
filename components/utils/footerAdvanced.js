@@ -146,30 +146,18 @@ import {
                 © 2023 Dralega Web Operations. All rights reserved
               </Text>
               <Stack direction={'row'} spacing={6}>
-                <SocialButton label={'Twitter'} href={'https://twitter.com/OpticsMed'}>
-                  <FaTwitter />
-                </SocialButton>
-                <SocialButton label={'YouTube'} href={'https://www.youtube.com/channel/UC761oMRZVp4Ld2FB5gfDKjA/featured'}>
-                  <FaYoutube />
-                </SocialButton>
-                <SocialButton label={'Instagram'} href={'https://www.instagram.com/medopticsltd/'}>
-                  <FaInstagram />
-                </SocialButton>
-                <SocialButton label={'Facebook'} href={'https://www.facebook.com/MedOpticsLtd/'}>
-                  <FaFacebook />
-                </SocialButton>
-                <SocialButton label={'LinkedIn'} href={'https://www.linkedin.com/company/med-optics-vision-centre/'}>
+                <SocialButton label={'LinkedIn'} href={'https://www.linkedin.com/in/obaya-dralega/'}>
                   <FaLinkedin />
                 </SocialButton>
               </Stack>
             </Stack>
             <Stack align={'flex-start'}>
               <ListHeader>Company</ListHeader>
-              <Link href={'/about/about-us'}>About us</Link>
-              <Link href={'#'}>Blog</Link>
+              {/* <Link href={'/about/about-us'}>About us</Link> */}
+              {/* <Link href={'#'}>Blog</Link> */}
               <Link href={'/info/contact-enquiry'}>Contact us</Link>
-              <Link href={'/products-and-services/services'}>Services</Link>
-              <Link href={'/appointments/eyeTest'}>Book Appointment</Link>
+              {/* <Link href={'/products-and-services/services'}>Services</Link> */}
+              {/* <Link href={'/appointments/eyeTest'}>Book Appointment</Link> */}
             </Stack>
             <Stack align={'flex-start'}>
               <ListHeader>Internal</ListHeader>

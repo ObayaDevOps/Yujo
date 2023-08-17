@@ -15,7 +15,7 @@ import {
   ScaleFade
 } from '@chakra-ui/react'
 
-
+import NextLink from 'next/link'
 
 import React, { useRef } from "react";
 import { useInView } from "framer-motion";
@@ -92,7 +92,9 @@ export default function blogPostWithImage() {
         overflow={'hidden'}
         ref={ref2}
         >
+
         <Box  maxW={{md:'75vw'}} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'} >
+        <NextLink href='https://www.medopticsltd.com/'>
             <Image
                         // w="full"
                         rounded="lg"
@@ -104,6 +106,8 @@ export default function blogPostWithImage() {
                         placeholder="blur"
                         blurDataURL={getCloudinaryImageBlur('Screenshot_from_2023-08-10_16-23-10_kylnck.png')}
             />  
+            </NextLink>
+
         </Box>
         <Stack>
           <Text
@@ -114,15 +118,18 @@ export default function blogPostWithImage() {
             pt={7}
             // pb={5}
             letterSpacing={1.1}>
-            FullStack, Bookings ,CMS
+            FullStack, Bookings, CMS
           </Text>
-          <Heading
-            // eslint-disable-next-line react-hooks/rules-of-hooks
-            color={useColorModeValue('gray.700', 'white')}
-            fontSize={'2xl'}
-            fontFamily={'body'}>
-            Med-Optics Vision Centre
-          </Heading>
+          <NextLink href='https://www.medopticsltd.com/'>
+            <Heading
+              // eslint-disable-next-line react-hooks/rules-of-hooks
+              color={useColorModeValue('gray.700', 'white')}
+              fontSize={'2xl'}
+              fontFamily={'body'}>
+              Med-Optics Vision Centre
+            </Heading>
+          </NextLink>
+
           <Text color={useColorModeValue('gray.500', 'white')}>
           A 'Top 100 Mid-Sized Companies in Uganda 2022' Winner. The User wanted a high performance website that the marketing department was able to edit the content of the website in a similar fashion to wordpress but with better SEO and google pageRank Score (95+) 
           </Text>
@@ -145,6 +152,7 @@ export default function blogPostWithImage() {
 
         >
         <Box  maxW={'75vw'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'} >
+        <NextLink href='https://www.afropocene.com/'>
             <Image
                         // w="full"
                         rounded="lg"
@@ -156,6 +164,7 @@ export default function blogPostWithImage() {
                         placeholder="blur"
                         blurDataURL={getCloudinaryImageBlur('afropoceneScreenshot_qwd27h.jpg')}
             />  
+        </NextLink>
         </Box>
         <Stack>
           <Text
@@ -168,13 +177,15 @@ export default function blogPostWithImage() {
             letterSpacing={1.1}>
             FullStack, Web3, CMS
           </Text>
-          <Heading
-            // eslint-disable-next-line react-hooks/rules-of-hooks
-            color={useColorModeValue('gray.700', 'white')}
-            fontSize={'2xl'}
-            fontFamily={'body'}>
-            Afropocene StudioLab
-          </Heading>
+          <NextLink href='https://www.afropocene.com/'>
+            <Heading
+              // eslint-disable-next-line react-hooks/rules-of-hooks
+              color={useColorModeValue('gray.700', 'white')}
+              fontSize={'2xl'}
+              fontFamily={'body'}>
+              Afropocene StudioLab
+            </Heading>
+          </NextLink>
           <Text color={useColorModeValue('gray.500', 'white')}>
           Afropocene StudioLab is an award winning collaborative arts and technology lab, which aims to foster and export
 the next generation of influential African technology (NFTs) and art. We are a proud recipient of funding from the
@@ -199,6 +210,8 @@ United Nations Development Program in 2023.
 
         >
         <Box  maxW={'75vw'} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'} >
+        <NextLink href='http://humble-beeing.com/'>
+
             <Image
                         // w="full"
                         rounded="lg"
@@ -210,6 +223,7 @@ United Nations Development Program in 2023.
                         placeholder="blur"
                         blurDataURL={getCloudinaryImageBlur('Screenshot_from_2023-08-10_16-25-39_evsnsk.jpg')}
             />  
+        </NextLink>
         </Box>
         <Stack>
           <Text
@@ -224,13 +238,15 @@ United Nations Development Program in 2023.
             letterSpacing={1.1}>
             FullStack
           </Text>
-          <Heading
-            // eslint-disable-next-line react-hooks/rules-of-hooks
-            color={useColorModeValue('gray.700', 'white')}
-            fontSize={'2xl'}
-            fontFamily={'body'}>
-            Humble Beeing Honey
-          </Heading>
+          <NextLink href='http://humble-beeing.com/'>
+            <Heading
+              // eslint-disable-next-line react-hooks/rules-of-hooks
+              color={useColorModeValue('gray.700', 'white')}
+              fontSize={'2xl'}
+              fontFamily={'body'}>
+              Humble Beeing Honey
+            </Heading>
+          </NextLink>
           <Text color={useColorModeValue('gray.500', 'white')}>
           Humble Beeing is a proudly Ugandan Social Enterprise specialising in Beekeeping. A Website Built for Beekeeping Social Enterprise - the intention was to give the new company a polished professional look, while informing about the company mission, vision and brand image. Interactive Scroll Elements. Built and Designed in house with No templates used. Styled CSS and Interactivity by SemanticUI.
         </Text>

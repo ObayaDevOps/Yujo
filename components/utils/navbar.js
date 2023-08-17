@@ -295,11 +295,11 @@ const NAV_ITEMS = [
   {
     label: 'About',
     children: [
-      {
-        label: 'About Me',
-        subLabel: 'Professional Experience',
-        href: '/about/about-me',
-      },
+      // {
+      //   label: 'About Me',
+      //   subLabel: 'Professional Experience',
+      //   href: '/about/about-me',
+      // },
       // {
       //   label: 'FAQs',
       //   subLabel: 'Frequently Asked Questions',

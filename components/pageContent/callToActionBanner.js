@@ -49,7 +49,7 @@ export default function CallToActionBanner(){
             mt={{ base: 8, lg: 0 }}
             flexShrink={{ lg: 0 }}
           >
-            <NextLink href="/info/service-centres">
+            <NextLink href="/pricing/our-prices">
                 <Button
                 as="a"
                 variant="solid"
@@ -84,7 +84,7 @@ export default function CallToActionBanner(){
               </NextLink>
             
 
-              <NextLink href="/appointments/eyeTest">
+              <NextLink href="/info/contact-enquiry">
                   <Button
                   as="a"
                   colorScheme="whiteAlpha"
@@ -107,7 +107,7 @@ export default function CallToActionBanner(){
                   fontFamily="Helvetica"
 
                   >
-                  Book an Appointment
+                  Get in Contact
                   <Icon boxSize={4} ml={1} viewBox="0 0 20 20" fill="currentColor">
                       <path
                       fillRule="evenodd"
