@@ -25,7 +25,7 @@ import { getCloudinaryImage, getCloudinaryImageBlur } from '../../components/uti
 
 //put this in a carousel
 export default function blogPostWithImage() {
-  const scaleFactor = 0.4;
+  const scaleFactor = 0.9;
 
   const { colorMode } = useColorMode()
 

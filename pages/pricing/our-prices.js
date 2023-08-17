@@ -236,7 +236,7 @@ export default function App(){
                       _dark={{ color: "gray.50" }}
                       lineHeight="tight"
                     >
-                      $1450+
+                      $2450+
                       <chakra.span
                         fontSize="2xl"
                         fontWeight="medium"
@@ -244,7 +244,7 @@ export default function App(){
                         _dark={{ color: "gray.100" }}
                       >
                         {" "}
-                        {/* /starting from{" "} */}
+                        {/* /9{" "} */}
                       </chakra.span>
                     </Text>
                     <chakra.p
@@ -266,7 +266,7 @@ export default function App(){
                     roundedBottom="md"
                   >
                     <Stack mb={5} spacing={4}>
-                      <Feature>6-Page Website: Landing Page, About Us, Products and Services, Contact Us, Bookings Calendar, FAQs </Feature>
+                      <Feature>6-Page Website: Landing Page, About Us, Products and Services, Contact Us, Bookings Calendar, FAQs, Blog </Feature>
                       <Feature>Sanity CMS: Update Website Content Yourself</Feature>
                       <Feature>A.I Chatbots</Feature>
                       <Feature>Light/Dark Mode</Feature>
