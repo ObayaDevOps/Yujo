@@ -69,7 +69,7 @@ export default function App(){
       boxSize="full"
       bg="#F9FAFB"
       _dark={{ bg: "gray.600" }}
-      p={10}
+      p={{base: 2,md:5}}
       alignItems="center"
       justifyContent="center"
     >
@@ -81,10 +81,10 @@ export default function App(){
         w="full"
         bg={bottomBg}
       >
-        <Box pt={20} rounded="md" bg={topBg}>
+        <Box pt={10} rounded="md" bg={topBg}>
           <Box w="full" px={[10, , 4]} mx="auto">
 
-        <Heading fontSize={{base: '7xl', md:'8xl'}} bgClip="text"
+        <Heading fontSize={{base: '5xl', md:'8xl'}} bgClip="text"
             bgGradient="linear(to-r, white, whiteAlpha.800)"
             fontWeight="extrabold">
               Our Pricing
