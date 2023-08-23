@@ -176,7 +176,7 @@ export default function App(){
                       <Feature>4-Page Website: Landing Page, About Us, Products and Services, Contact Us </Feature>
                       <Feature>Sanity CMS - Update your website yourself</Feature>
                       <Feature>Market Leading SEO and Visitor Analytics</Feature>
-
+                      <Feature>Free Web Hosting !</Feature>
                       <Feature>Mobile Friendly Design - Optimised for Ugandan Internet</Feature>
                       <Feature>Built with Next.Js</Feature>
                     </Stack>
