@@ -306,6 +306,11 @@ const NAV_ITEMS = [
       //   href: '/about/faqs',
       // },
       {
+        label: 'Obaya Dralega LinkedIn',
+        subLabel: '',
+        href:"https://www.linkedin.com/in/obaya-dralega/",
+      },
+      {
         label: 'CV',
         subLabel: '',
         href:"https://pdfhost.io/v/TgnGelt~0_Obaya_Dralega_CV_2023",
