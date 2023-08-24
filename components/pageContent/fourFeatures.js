@@ -23,8 +23,8 @@ import { CheckIcon } from '@chakra-ui/icons'
 const features = [
     {
       id: 0,
-      title: 'Next.Js - Faster than BBC.com',
-      text: 'Next.Js is High Performance, Modern Software Development Library. You get a site made with the same tech used by some of the world\'s largest companies including: TikTok, Nike, Washington Post, Ticketmaster and DoorDash',
+      title: 'Next.JS - Faster than BBC.com',
+      text: 'Next.JS is High Performance, Modern Software Development Library. You get a site made with the same tech used by some of the world\'s largest companies including: TikTok, Nike, Washington Post, Ticketmaster and DoorDash',
     },
     {
       id: 1,
