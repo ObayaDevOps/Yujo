@@ -428,7 +428,7 @@ export default function App(){
                       _dark={{ color: "gray.50" }}
                       lineHeight="tight"
                     >
-                      $5500+
+                      $12500+
                       <chakra.span
                         fontSize="2xl"
                         fontWeight="medium"
