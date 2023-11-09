@@ -44,6 +44,9 @@ export default function blogPostWithImage() {
   const ref5 = useRef(null)
   const isInView5 = useInView(ref5)
 
+  const ref6 = useRef(null)
+  const isInView6 = useInView(ref6)
+
   return (
     
     <Box p={4}>
@@ -77,6 +80,69 @@ export default function blogPostWithImage() {
     
     <Center>
       <VStack padding={{md:15}} spacing={12}>
+
+      <ScaleFade initialScale={scaleFactor}
+    in={isInView6}>
+
+      <Box
+        maxW={{base: '80vw', md: '60vw'}}
+        w={'full'}
+        // eslint-disable-next-line react-hooks/rules-of-hooks
+        bg={useColorModeValue('white', 'gray.900')}
+        boxShadow={'2xl'}
+        rounded={'md'}
+        p={10}
+        overflow={'hidden'}
+        ref={ref6}
+        >
+
+        <Box  maxW={{md:'75vw'}} bg={'gray.100'} mt={-6} mx={-6} mb={6} pos={'relative'} >
+        <NextLink href='https://www.taxedgeadvisory.co.uk/'>
+            <Image
+                        // w="full"
+                        //Screenshot_from_2023-11-02_11-25-13_ufpos1
+
+
+
+
+                        rounded="lg"
+                        shadow="2xl"
+                        src={getCloudinaryImage('Screenshot_from_2023-11-02_11-25-13_ufpos1.png')} 
+                        alt="Hellonext feedback boards software screenshot"
+                        width={3675/3}
+                        height={2001/3} 
+                        placeholder="blur"
+                        blurDataURL={getCloudinaryImageBlur('Screenshot_from_2023-11-02_11-25-13_ufpos1.png')}
+            />  
+            </NextLink>
+
+        </Box>
+        <Stack>
+          <Text
+            color={'blue.500'}
+            textTransform={'uppercase'}
+            fontWeight={800}
+            fontSize={'sm'}
+            pt={7}
+            // pb={5}
+            letterSpacing={1.1}>
+            FullStack, Branding Design, SanityCMS
+          </Text>
+          <NextLink href='https://www.taxedgeadvisory.co.uk/'>
+            <Heading
+              // eslint-disable-next-line react-hooks/rules-of-hooks
+              color={useColorModeValue('gray.700', 'white')}
+              fontSize={'2xl'}
+              fontFamily={'body'}>
+              Tax Edge Advisory
+            </Heading>
+          </NextLink>
+
+          <Text color={useColorModeValue('gray.500', 'white')}>
+          Tax Edge Advisory seeks to be a leading specialist tax consultancy firm with a focus on providing expert advice on UK tax incentives to businesses, accountants, and other professional advisers.          </Text>
+        </Stack>
+      </Box>
+      </ScaleFade>   
       
       <ScaleFade initialScale={scaleFactor}
     in={isInView2}>
