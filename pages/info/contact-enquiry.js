@@ -284,7 +284,7 @@ export default function ContactFormWithSocialButtons() {
                           title: 'Message Sent.',
                           description: "We will get back to you soon!",
                           status: 'success',
-                          duration: 9000,
+                          duration: 900,
                           isClosable: true,
                         })}
       

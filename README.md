@@ -63,6 +63,11 @@ SMTP_USER=XXXXXXXXXXX@gmail.com
 SMTP_PASSWORD=XXXXXXXXXXXX
 RECIPIENT_ADDRESS=XXXXXXXXXXXXX@gmail.com
 
+nodemailer will need to be installed: 
+
+and an api route will need to be set up in codebase: 'pages/api/contact.js'
+contact.js will use nodemailer.
+
 
 ## Image Hosting
 For Speed and Performance, this website Hosts and retirevies all images on Cloudinary, an account is Needed.
