@@ -16,7 +16,7 @@ export default function Home() {
         <link rel="shortcut icon" href="../../../images/icon/DWOLogo.png"></link>
       </Head>
 
-      <Box>
+      <Box >
         <LandingPage />
       </Box>
 

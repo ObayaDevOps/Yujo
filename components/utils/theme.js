@@ -2,7 +2,7 @@ import { extendTheme } from '@chakra-ui/react'
 
 const theme = extendTheme({
     config:{
-      initialColorMode: 'light',
+      initialColorMode: 'dark',
       useSystemColorMode: false
     },
     fonts:{
@@ -11,17 +11,18 @@ const theme = extendTheme({
       text:  'Arial, sans-serif',
     },
     colors:{
-      50: '#dfffe9',
-      100: '#b8f6cc',
-      200: '#8defb0',
-      300: '#62e897',
-      400: '#38e17f',
-      500: '#1ec75b',
-      600: '#129b3c',
-      700: '#096f22',
-      800: '#00430e',
-      900: '#031800',
-    }
+      transparent: "transparent",
+      black: "#000",
+      white: "#fff",
+
+    },
+    styles: {
+      global: () => ({
+        body: {
+          bg: "",
+        },
+      }),
+    },
     // colors:{
     //   50: '#f2f2f2',
     //   100: '#d9d9d9',

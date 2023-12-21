@@ -1,5 +1,5 @@
 {
-  "name": "medoptics-nextjs",
+  "name": "yujo-nextjs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -20,6 +20,7 @@
     "@sanity/icons": "^2.2.2",
     "@sanity/image-url": "^1.0.2",
     "@sanity/ui": "^1.2.0",
+    "@sanity/vision": "^3.23.1",
     "@vercel/analytics": "^0.1.11",
     "cloudinary-build-url": "^0.2.4",
     "dotenv": "^16.0.3",
@@ -34,9 +35,9 @@
     "react-icons": "^4.6.0",
     "react-is": "^18.2.0",
     "react-responsive-carousel": "^3.2.23",
-    "sanity": "^3.2.6",
+    "sanity": "^3.23.1",
     "sanity-plugin-cloudinary": "^1.0.1",
-    "styled-components": "^5.3.6"
+    "styled-components": "^6.1.2"
   },
   "devDependencies": {
     "eslint": "8.13.0",

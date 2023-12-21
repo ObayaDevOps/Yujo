@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
 
       <WithSubnavigation />
       <Component {...pageProps} />
-      <FooterLargeWithNewsletterAdvanced />
+      {/* <FooterLargeWithNewsletterAdvanced /> */}
       <Analytics />
 
 

@@ -45,7 +45,13 @@ function DarkToggleButton() {
     <header>
     <Script src="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" />
       <Button onClick={toggleColorMode} size='xs' fontFamily={'Space Mono'} py={-1} rounded={'none'} >
-        {colorMode === 'light' ? 'Dark' : 'Light'} Mode
+        <Text color={'red'}>
+        {colorMode === 'light' ? 'Night' : 'Day'} 
+        </Text>
+
+        {/* conditional icon */}
+
+
       </Button>
     </header>
   )
@@ -60,13 +66,14 @@ export default function WithSubnavigation() {
   const { colorMode, toggleColorMode } = useColorMode()
 
   return (
-    <Box>
+    <Box maxH={"20vh"} >
       <Flex
-        bg={useColorModeValue('white', 'gray.800')}
+        bg={useColorModeValue('whiteAlpha.100', 'blackAlpha.100')}
         color={useColorModeValue('gray.600', 'white')}
         minH={'60px'}
         py={{ base: 2}}
         px={{ base: 4 }}
+        // opacity={0.3}
         // borderBottom={1}
         borderStyle={'solid'}
         borderColor={useColorModeValue('gray.200', 'gray.900')}
@@ -76,20 +83,26 @@ export default function WithSubnavigation() {
           flex={{ base: 1, md: 'auto' }}
           ml={{ base: -2 }}
           display={{ base: 'flex', md: 'none' }}>
-          <IconButton
+
+
+          {/* <IconButton
             onClick={onToggle}
             icon={
               isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
             }
             variant={'ghost'}
             aria-label={'Toggle Navigation'}
-          />
+          /> */}
+
+
+
+
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }} ml={{base:-85, md: 0}}>
         <NextLink href='/#' passHref>
           <Link>
               {/* <NextImage src={colorMode === 'light' ? DWOLOGO:  DWOLOGO} width={40} height={40}/> */}
-              <NextImage
+              {/* <NextImage
                     // w="full"
                     rounded="lg"
                     shadow="2xl"
@@ -98,8 +111,8 @@ export default function WithSubnavigation() {
                     width={115}
                     height={115}
                     placeholder="blur"
-                    blurDataURL={getCloudinaryImageBlur('Med-Optics_ly2gge.jpg')}
-                />
+                    blurDataURL={getCloudinaryImageBlur('Black_And_White_Modern_Vintage_Retro_Brand_Logo_b4pr7b.jpg')}
+                /> */}
               
           </Link>
         </NextLink>
@@ -114,7 +127,8 @@ export default function WithSubnavigation() {
           // justify={'flex-end'}
           // direction={'row'}
           // spacing={6}
-          mt={{md:-12}}
+          // mt={{md:-12}}
+
           >
           <DarkToggleButton />
         </Flex>
@@ -290,11 +304,13 @@ const MobileNavItem = ({ label, children, href }) => {
   //This array should take items from the Sanity List
 //use the client to fetch the list you want
 
+const NAV_ITEMS = [ ];
 
-const NAV_ITEMS = [
-  {
-    label: 'About',
-    children: [
+
+// const NAV_ITEMS = [
+//   {
+//     label: 'About',
+//     children: [
       // {
       //   label: 'About Me',
       //   subLabel: 'Professional Experience',
@@ -305,19 +321,19 @@ const NAV_ITEMS = [
       //   subLabel: 'Frequently Asked Questions',
       //   href: '/about/faqs',
       // },
-      {
-        label: 'Obaya Dralega LinkedIn',
-        subLabel: '',
-        href:"https://www.linkedin.com/in/obaya-dralega/",
-      },
-      {
-        label: 'CV',
-        subLabel: '',
-        href:"https://pdfhost.io/v/TgnGelt~0_Obaya_Dralega_CV_2023",
-      },
+  //     {
+  //       label: 'Obaya Dralega LinkedIn',
+  //       subLabel: '',
+  //       href:"https://www.linkedin.com/in/obaya-dralega/",
+  //     },
+  //     {
+  //       label: 'CV',
+  //       subLabel: '',
+  //       href:"https://pdfhost.io/v/TgnGelt~0_Obaya_Dralega_CV_2023",
+  //     },
 
-    ],
-  },
+  //   ],
+  // },
   // {
   //   label: 'Services',
   //   children: [
@@ -333,27 +349,27 @@ const NAV_ITEMS = [
   //     },
   //   ],
   // }, 
-  {
-    label: 'Pricing',
-    href: '/pricing/our-prices',
-  },  
-  {
-    label: 'Get in Touch',
-    children: [
+  // {
+  //   label: 'Pricing',
+  //   href: '/pricing/our-prices',
+  // },  
+  // {
+  //   label: 'Get in Touch',
+  //   children: [
       // {
       //   label: 'Book Appointment',
       //   subLabel: 'Schedule a Call',
       //   href: '/appointments/eyeTest',
       // },
-      {
-        label: 'Contact Us',
-        subLabel: " ",
-        href: '/info/contact-enquiry',
-      },
-    ],
-  }
+//       {
+//         label: 'Contact Us',
+//         subLabel: " ",
+//         href: '/info/contact-enquiry',
+//       },
+//     ],
+//   }
 
-];
+// ];
 
 
 
