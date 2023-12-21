@@ -1,5 +1,11 @@
+import { HomeIcon } from '@sanity/icons'
+import { format, parseISO } from 'date-fns'
+import { defineField, defineType } from 'sanity'
+
+
 export default defineType({
-    name: 'taxCreditsPage',
+
+    name: 'Downloadable Menu',
     title: 'DownloadableMenu',
     icon: HomeIcon,
     type: 'file',
