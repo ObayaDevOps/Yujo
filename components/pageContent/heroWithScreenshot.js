@@ -162,7 +162,7 @@ export default function App(){
           pt={{base:10}}
           ref={ref1}
         >
-          <NextLink href="/pricing/our-prices" passHref>
+          <NextLink href="/" passHref>
           <Button
             as="a"
             // bg="red"
@@ -193,7 +193,7 @@ export default function App(){
             </Icon>
           </Button>
           </NextLink>
-          <NextLink href="/info/contact-enquiry" passHref>
+          <NextLink href="/" passHref>
           <Button
             as="a"
             colorScheme='red'

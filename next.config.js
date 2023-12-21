@@ -10,6 +10,17 @@ module.exports = {
   images: {
     domains: ['res.cloudinary.com'],
   },
+  webpack: (config, options) => {
+    config.resolve.alias.canvas = false;
+
+    config.module.rules.push({
+      test: /\.pdf$/i,
+      type: 'asset/source'
+  })
+
+    
+    return config;
+ },
 };
 
 
