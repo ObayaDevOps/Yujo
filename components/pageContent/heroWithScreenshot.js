@@ -37,7 +37,7 @@ export const Blur = (props) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}>
-      <circle cx="71" cy="61" r="111" fill="#E40084" />
+      {/* <circle cx="71" cy="61" r="111" fill="#E40084" />
       <circle cx="244" cy="106" r="139" fill="#E40084" />
       <circle cy="291" r="139" fill="#E40084" />
       <circle cx="80.5" cy="189.5" r="101.5" fill="#E40084" />
@@ -48,23 +48,22 @@ export const Blur = (props) => {
       <circle cy="291" r="139" fill="#E40084" />
       <circle cx="80.5" cy="189.5" r="101.5" fill="#FFEA00" />
       <circle cx="196.5" cy="317.5" r="101.5" fill="#FFEA00" />
-      <circle cx="70.5" cy="458.5" r="101.5" fill="#FFEA00" />
+      <circle cx="70.5" cy="458.5" r="101.5" fill="#FFEA00" /> */}
 
 
 
       {/* #EC2227 - Red */}
 
-      {/* <circle cx="71" cy="61" r="111" fill="#EC2227" />
+      <circle cx="71" cy="61" r="111" fill="#EC2227" />
       <circle cx="244" cy="106" r="139" fill="#EC2227" />
       <circle cy="291" r="139" fill="#EC2227" />
       <circle cx="80.5" cy="189.5" r="101.5" fill="#EC2227" />
       <circle cx="196.5" cy="317.5" r="101.5" fill="#EC2227" />
       <circle cx="70.5" cy="458.5" r="101.5" fill="#EC2227" />
+      {/* <circle cx="426.5" cy="-0.5" r="101.5" fill="#EC2227" /> */}
+      {/* <circle cx="71" cy="61" r="111" fill="#EC2227" /> */}
       <circle cx="244" cy="106" r="139" fill="#EC2227" />
-      <circle cy="291" r="139" fill="#EC2227" /> */}
-
-
-
+      <circle cy="291" r="139" fill="#EC2227" />
       {/* <circle cx="80.5" cy="189.5" r="101.5" fill="#FFEA00" />
       <circle cx="196.5" cy="317.5" r="101.5" fill="#FFEA00" />
       <circle cx="70.5" cy="458.5" r="101.5" fill="#FFEA00" /> */}
