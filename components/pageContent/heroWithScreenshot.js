@@ -3,7 +3,7 @@ import {
   Box,
   Button,
   Stack,
-  Image,
+  // Image,
   Text,
   Center,
   Icon,
@@ -19,9 +19,6 @@ import React, { useRef } from "react";
 import { useInView } from "framer-motion";
 import NextLink from 'next/link'
 import NextImage from 'next/image'
-
-import { GiChopsticks } from "react-icons/gi";
-import { FaCocktail } from "react-icons/fa";
 
 
 
@@ -86,27 +83,32 @@ export default function App(){
   const { colorMode } = useColorMode()
 
   return (
-    <Box px={8} py={{base: 0, md: 0}} mx="auto" maxHeight={'80vh'}>
+    <Box px={8} py={{base: 0, md: 0}} mx="auto" maxHeight={'80vh'} >
 
 
 
       <Center
         w={{ base: "full", md: 1/3, lg: 1/4 }}
         mx="auto"
-        mt={{base: 0, md:20}}
+        my="auto"
+        // position='fixed'
+        mt={{base: 20, md:20}}
         textAlign="center"
       >
         {colorMode === 'dark' && (
-        <Image
+        <NextImage
                     // w="full"
-                    rounded="lg"
+                    // rounded="lg"
+                    // objectFit='contain'
+                    // position='relative'
                     shadow="2xl"
                     src={getCloudinaryImage('yujo3.svg')} 
-                    alt="Hellonext feedback boards software screenshot"
-                    // width={3675/2.5}
-                    // height= {2001/2.5}
+                    alt="Yujo Brand Logo"
+                    width={1971}
+                    height= {2667}
+
                     placeholder="blur"
-                    layout='fill'
+                    // layout='responsive'
                     // opacity={0.5}
                     blurDataURL={getCloudinaryImageBlur('yujo3.svg')}
                     // ref={ref}
@@ -115,16 +117,16 @@ export default function App(){
         )}
 
 {colorMode === 'light' && (
-                <Image
+                <NextImage
                     // w="full"
                     rounded="lg"
                     shadow="2xl"
                     src={getCloudinaryImage('yujo3-white.svg')} 
                     alt="Hellonext feedback boards software screenshot"
-                    // width={3675/2.5}
-                    // height= {2001/2.5}
+                    width={1971}
+                    height= {2667}
                     placeholder="blur"
-                    layout='fill'
+                    // layout='fill'
                     // opacity={0.5}
                     blurDataURL={getCloudinaryImageBlur('yujo3-white.svg')}
                     // ref={ref}
@@ -140,95 +142,6 @@ export default function App(){
       />
 
       </Center>
-
-
-      <Box
-        w={{ base: "full", md: 11 / 12, xl: 9 / 12 }}
-        mx="auto"
-        pt={{base: 6}}
-        textAlign={{ base: "center", md: "center" }}
-      >
-
-      <ScaleFade  
-        initialScale={0.6}
-        in={isInView1}
-      >
-
-        <Stack
-          direction={{ base: "column", sm: "row" }}
-          mb={{ base: 4, md: 0 }}
-          spacing={2}
-          justifyContent={{ sm: "left", md: "center" }}
-          pt={{base:10}}
-          ref={ref1}
-        >
-          <NextLink href="/" passHref>
-          <Button
-            as="a"
-            // bg="red"
-            colorScheme='red'
-            textColor={'red'}
-            variant='outline'
-            
-            display="inline-flex"
-            alignItems="center"
-            justifyContent="center"
-            w={{ base: "full", sm: "auto" }}
-            mb={{ base: 2, sm: 0 }}
-            size="lg"
-            // cursor="pointer"
-            shadow={'xl'}
-            fontFamily={'Space Mono'}
-          >
-            Food Menu
-            <Icon boxSize={7} ml={6} viewBox="0 0 20 20" fill="currentColor">
-              {/* <path
-                fillRule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              /> */}
-              <GiChopsticks />
-
-
-            </Icon>
-          </Button>
-          </NextLink>
-          <NextLink href="/" passHref>
-          <Button
-            as="a"
-            colorScheme='red'
-            textColor={'red'}
-            variant='outline'
-            display="inline-flex"
-            alignItems="center"
-            justifyContent="center"
-            w={{ base: "full", sm: "auto" }}
-            mb={{ base: 2, sm: 0 }}
-            size="lg"
-            // cursor="pointer"
-            shadow={'lg'}
-            fontFamily={'Space Mono'}
-            
-          >
-            Drinks Menu
-            <Icon boxSize={7} ml={6} viewBox="0 0 20 20" fill="currentColor">
-
-            <FaCocktail />
-
-              {/* <path
-                fillRule="evenodd"
-                d="M6.672 1.911a1 1 0 10-1.932.518l.259.966a1 1 0 001.932-.518l-.26-.966zM2.429 4.74a1 1 0 10-.517 1.932l.966.259a1 1 0 00.517-1.932l-.966-.26zm8.814-.569a1 1 0 00-1.415-1.414l-.707.707a1 1 0 101.415 1.415l.707-.708zm-7.071 7.072l.707-.707A1 1 0 003.465 9.12l-.708.707a1 1 0 001.415 1.415zm3.2-5.171a1 1 0 00-1.3 1.3l4 10a1 1 0 001.823.075l1.38-2.759 3.018 3.02a1 1 0 001.414-1.415l-3.019-3.02 2.76-1.379a1 1 0 00-.076-1.822l-10-4z"
-                clipRule="evenodd"
-              /> */}
-            </Icon>
-          </Button>
-          </NextLink>
-
-        </Stack>
-
-      </ScaleFade>
-      </Box>
-
 
     </Box>
   );

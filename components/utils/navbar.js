@@ -85,14 +85,14 @@ export default function WithSubnavigation() {
           display={{ base: 'flex', md: 'none' }}>
 
 
-          {/* <IconButton
+          <IconButton
             onClick={onToggle}
             icon={
               isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
             }
             variant={'ghost'}
             aria-label={'Toggle Navigation'}
-          /> */}
+          />
 
 
 
@@ -161,7 +161,7 @@ const DesktopNav = () => {
                 href={navItem.href ?? '#'}
                 fontWeight={500}
                 color={linkColor}
-                _hover={{ bg: colorMode === 'light' ? 'blue.50': 'gray.700', textColor: 'blue.400'}}
+                _hover={{ bg: colorMode === 'light' ? 'red.50': 'red.700', textColor: 'blue.400'}}
                 fontFamily={'Space Mono'}
                 >
                   {navItem.label}
@@ -304,7 +304,15 @@ const MobileNavItem = ({ label, children, href }) => {
   //This array should take items from the Sanity List
 //use the client to fetch the list you want
 
-const NAV_ITEMS = [ ];
+const NAV_ITEMS = [
+  {
+      label: 'Food Menu',
+  }, 
+  {
+    label: 'Drinks Menu',
+}, 
+
+ ];
 
 
 // const NAV_ITEMS = [
