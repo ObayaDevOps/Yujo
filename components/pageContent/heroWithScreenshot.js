@@ -3,10 +3,12 @@ import {
   Box,
   Button,
   Stack,
-  // Image,
+  Image,
   Text,
+  Flex,
   Center,
   Icon,
+  Show,
   useColorModeValue,
   useBreakpointValue,
   useColorMode,
@@ -83,65 +85,113 @@ export default function App(){
   const { colorMode } = useColorMode()
 
   return (
-    <Box px={8} py={{base: 0, md: 0}} mx="auto" maxHeight={'80vh'} >
+    <Box py={{base: 0, md: 0}} mx="auto" maxHeight={{base: '10vh', md:'10vh'}} >
 
 
+      <Show above='sm'>
+        <Center
+          // w={{ base: "full"}}
+          // mx="auto"
+          // my="auto"
+          // position='fixed'
+          // mt={{base: '25vh', md: -10}}
+          textAlign="center"
+        >
+          {colorMode === 'dark' && (
+          <Image
+                      // shadow="2xl"
+                      src={getCloudinaryImage('yujo5.svg')} 
+                      alt="Yujo Brand Logo"
+                      width={{base:200, md:1980/1.5}}
+                      height= {{base:150,md:1080/1.5}}
+                      placeholder="blur"
+                      blurDataURL={getCloudinaryImageBlur('yujo5.svg')}
+          /> 
+          )}
 
-      <Center
-        w={{ base: "full", md: 1/3, lg: 1/4 }}
-        mx="auto"
-        my="auto"
-        // position='fixed'
-        mt={{base: 20, md:20}}
-        textAlign="center"
-      >
-        {colorMode === 'dark' && (
-        <NextImage
-                    // w="full"
-                    // rounded="lg"
-                    // objectFit='contain'
-                    // position='relative'
-                    shadow="2xl"
-                    src={getCloudinaryImage('yujo3.svg')} 
-                    alt="Yujo Brand Logo"
-                    width={1971}
-                    height= {2667}
+  {colorMode === 'light' && (
+                  <NextImage
+                      // w="full"
+                      rounded="lg"
+                      shadow="2xl"
+                      src={getCloudinaryImage('yujo3-white.svg')} 
+                      alt="Yujo Brand Logo"
+                      width={1971}
+                      height= {2667}
+                      placeholder="blur"
+                      // layout='fill'
+                      // opacity={0.5}
+                      blurDataURL={getCloudinaryImageBlur('yujo3-white.svg')}
+                      // ref={ref}
 
-                    placeholder="blur"
-                    // layout='responsive'
-                    // opacity={0.5}
-                    blurDataURL={getCloudinaryImageBlur('yujo3.svg')}
-                    // ref={ref}
+          /> 
+          )}
 
-        /> 
-        )}
+          {/* <Blur
+          position={'fixed'}
+          top={{base:'10vh', md:'10vh', lg:'15vh'}}
+          left={{base:'20vw', md:'40vw', lg:'40vw'}}
+          style={{ filter: 'blur(85px)' }}
+        /> */}
 
-{colorMode === 'light' && (
-                <NextImage
-                    // w="full"
-                    rounded="lg"
-                    shadow="2xl"
-                    src={getCloudinaryImage('yujo3-white.svg')} 
-                    alt="Hellonext feedback boards software screenshot"
-                    width={1971}
-                    height= {2667}
-                    placeholder="blur"
-                    // layout='fill'
-                    // opacity={0.5}
-                    blurDataURL={getCloudinaryImageBlur('yujo3-white.svg')}
-                    // ref={ref}
+        </Center>
+      </Show>
 
-        /> 
-        )}
 
-        <Blur
-        position={'fixed'}
-        top={{base:'10vh', md:'10vh', lg:'15vh'}}
-        left={{base:'20vw', md:'40vw', lg:'40vw'}}
-        style={{ filter: 'blur(85px)' }}
-      />
+      <Show below='sm'>
+        <Flex alignContent={"center"} justifyContent={"center"} marginY="auto">
+        <Center
+          // w={{ base: "full"}}
+          // mx="auto"
+          // my="auto"
+          // position='fixed'
+          // mt={{base: '25vh', md: -10}}
+          // textAlign="center"
+          // maxHeight={'80vh'}
+        >
+          {colorMode === 'dark' && (
+          <Box pt={'15vh'}>
+          <Image
+                      // shadow="2xl"
+                      src={getCloudinaryImage('yujo9.svg')} 
+                      alt="Yujo Brand Logo Mobile"
+                      width={300}
+                      height= {300}
+                      placeholder="blur"
+                      blurDataURL={getCloudinaryImageBlur('yujo9.svg')}
+          /> 
+          </Box>
+          )}
 
-      </Center>
+  {colorMode === 'light' && (
+                  <NextImage
+                      // w="full"
+                      rounded="lg"
+                      shadow="2xl"
+                      src={getCloudinaryImage('yujo7.svg')} 
+                      alt="Yujo Brand Logo"
+                      width={1971}
+                      height= {2667}
+                      placeholder="blur"
+                      // layout='fill'
+                      // opacity={0.5}
+                      blurDataURL={getCloudinaryImageBlur('yujo3-white.svg')}
+                      // ref={ref}
+
+          /> 
+          )}
+
+          {/* <Blur
+          position={'fixed'}
+          top={{base:'10vh', md:'10vh', lg:'15vh'}}
+          left={{base:'20vw', md:'40vw', lg:'40vw'}}
+          style={{ filter: 'blur(85px)' }}
+        /> */}
+
+        </Center>
+        </Flex>
+      </Show>
+
 
     </Box>
   );

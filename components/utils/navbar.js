@@ -130,7 +130,7 @@ export default function WithSubnavigation() {
           // mt={{md:-12}}
 
           >
-          <DarkToggleButton />
+          {/* <DarkToggleButton /> */}
         </Flex>
       </Flex>
 
@@ -161,7 +161,7 @@ const DesktopNav = () => {
                 href={navItem.href ?? '#'}
                 fontWeight={500}
                 color={linkColor}
-                _hover={{ bg: colorMode === 'light' ? 'red.50': 'red.700', textColor: 'blue.400'}}
+                _hover={{ bg: colorMode === 'light' ? 'red.50': 'red.700', textColor: 'white.400'}}
                 fontFamily={'Space Mono'}
                 >
                   {navItem.label}
@@ -200,7 +200,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
       display={'block'}
       p={2}
       // rounded={'md'}
-      _hover={{ bg: useColorModeValue('blue.50', 'gray.900') }}
+      _hover={{ bg: useColorModeValue('blue.50', 'green.900') }}
       >
       <Stack direction={'row'} align={'center'}>
         <Box>
@@ -236,7 +236,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
 const MobileNav = () => {
   return (
     <Stack
-      bg={useColorModeValue('white', 'gray.800')}
+      bg={useColorModeValue('white', 'red.500')}
       p={4}
       display={{ md: 'none' }}>
       {NAV_ITEMS.map((navItem) => (
@@ -306,10 +306,10 @@ const MobileNavItem = ({ label, children, href }) => {
 
 const NAV_ITEMS = [
   {
-      label: 'Food Menu',
+      label: 'Food',
   }, 
   {
-    label: 'Drinks Menu',
+    label: 'Drinks',
 }, 
 
  ];
