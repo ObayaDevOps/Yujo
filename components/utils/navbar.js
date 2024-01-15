@@ -307,6 +307,8 @@ const MobileNavItem = ({ label, children, href }) => {
 const NAV_ITEMS = [
   {
       label: 'Food',
+      href: '/menus/drinks-menu',
+
   }, 
   {
     label: 'Drinks',

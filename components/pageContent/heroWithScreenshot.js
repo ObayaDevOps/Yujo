@@ -82,7 +82,7 @@ export default function App(){
   const ref1 = useRef(null)
   const isInView1 = useInView(ref1)
 
-  const { colorMode } = useColorMode()
+  // const { colorMode } = useColorMode()
 
   return (
     <Box py={{base: 0, md: 0}} mx="auto" maxHeight={{base: '10vh', md:'10vh'}} >
@@ -97,7 +97,6 @@ export default function App(){
           // mt={{base: '25vh', md: -10}}
           textAlign="center"
         >
-          {colorMode === 'dark' && (
           <Image
                       // shadow="2xl"
                       src={getCloudinaryImage('yujo5.svg')} 
@@ -107,25 +106,7 @@ export default function App(){
                       placeholder="blur"
                       blurDataURL={getCloudinaryImageBlur('yujo5.svg')}
           /> 
-          )}
 
-  {colorMode === 'light' && (
-                  <NextImage
-                      // w="full"
-                      rounded="lg"
-                      shadow="2xl"
-                      src={getCloudinaryImage('yujo3-white.svg')} 
-                      alt="Yujo Brand Logo"
-                      width={1971}
-                      height= {2667}
-                      placeholder="blur"
-                      // layout='fill'
-                      // opacity={0.5}
-                      blurDataURL={getCloudinaryImageBlur('yujo3-white.svg')}
-                      // ref={ref}
-
-          /> 
-          )}
 
           {/* <Blur
           position={'fixed'}
@@ -149,7 +130,6 @@ export default function App(){
           // textAlign="center"
           // maxHeight={'80vh'}
         >
-          {colorMode === 'dark' && (
           <Box pt={'15vh'}>
           <Image
                       // shadow="2xl"
@@ -161,25 +141,8 @@ export default function App(){
                       blurDataURL={getCloudinaryImageBlur('yujo9.svg')}
           /> 
           </Box>
-          )}
 
-  {colorMode === 'light' && (
-                  <NextImage
-                      // w="full"
-                      rounded="lg"
-                      shadow="2xl"
-                      src={getCloudinaryImage('yujo7.svg')} 
-                      alt="Yujo Brand Logo"
-                      width={1971}
-                      height= {2667}
-                      placeholder="blur"
-                      // layout='fill'
-                      // opacity={0.5}
-                      blurDataURL={getCloudinaryImageBlur('yujo3-white.svg')}
-                      // ref={ref}
 
-          /> 
-          )}
 
           {/* <Blur
           position={'fixed'}

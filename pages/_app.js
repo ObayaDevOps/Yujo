@@ -9,7 +9,7 @@ import { Analytics } from '@vercel/analytics/react';
 
 function MyApp({ Component, pageProps }) {
   return (   
-    <ChakraProvider theme={theme}>
+    <ChakraProvider >
 
       <WithSubnavigation />
       <Component {...pageProps} />
